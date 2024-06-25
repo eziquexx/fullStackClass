@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * { margin: 0; padding: 0; } */
+        body {
+            position: relative;
+            width: 960px;
+            margin: 0 auto;
+
+        }
+        #header { 
+            width: 100%;
+            height: 80px;
+            position: relative;
+            text-align: center;
+            line-height: 80px;
+            background-color: yellowgreen;
+        }
+        #nav {
+            width: 100%;
+            height: 40px;
+            position: relative;
+            text-align: center;
+            line-height: 40px;
+            background-color: salmon;
+        }
+        #wrap {
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #aside {
+            width: 200px;
+            float: left;
+        }
+        #aside ul {
+            display: block;
+            width: 100%;
+        }
+        #aside ul li {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-indent: 16px;
+            line-height: 100%;
+        }
+        #aside ul li:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+        #section {
+            width: 760px;
+            float: left;
+            background-color: blueviolet;
+        }
+        #section p {
+            padding: 4px 20px;
+        }
+       
+        #footer {
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            position: relative; 
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="nav">navigation</div>
+    <div id="wrap">
+        <div id="aside">
+            <ul>
+                <li>java</li>
+                <li>C/C++</li>
+                <li>phyton</li>
+                <li>javascript</li>
+                <li>c#</li>
+            </ul>
+        </div>
+        <div id="section">
+            <p>section</p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore fugiat, dolor atque delectus, quas impedit nihil nobis tempore aliquid praesentium magnam illo dolorum dolorem molestiae iste optio voluptatibus est.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi debitis facere harum, facilis voluptatibus quibusdam saepe praesentium porro ipsam officiis molestias necessitatibus modi? Magnam atque maxime autem architecto officiis.
+            </p>
+        </div>
+    </div>
+    <div id="footer">footer</div>
+</body>
+</html>

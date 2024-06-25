@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 { font-size: 5vw; }
+        @media screen and (max-width: 767px){
+            h1 {
+                background-color: blue;
+                color: white;
+                font-size: 3vw;
+            }
+            p {
+                background-color: aqua;
+                color: brown;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px){
+            h1 {
+                background-color: green;
+                color: yellow;
+            }
+            p {
+                background-color: aqua;
+                color: brown;
+            }
+        }
+        @media screen and (min-width: 1025px){
+            h1 {
+                background-color: yellow;
+                color: black;
+            }
+            p {
+                background-color: aqua;
+                color: brown;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>반응형 테스트</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis odio necessitatibus? Deleniti modi numquam sint quae et odio, minus recusandae corrupti, reiciendis consequuntur sed! Adipisci blanditiis ratione facere repellendus?</p>
+</body>
+</html>

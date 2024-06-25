@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trasnform</title>
+    <style>
+        /** 공통 *************************************************/
+
+        h1, h2, h4 { text-align: center; }
+        .box {
+            width: 500px;
+            height: 50px;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 50px;
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        /** scale *************************************************/
+
+        #wrap1 .box-scale:hover {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+        .box-1 { background: #66f; opacity: 0.1; }
+        .box-2 { background: #66f; opacity: 0.2; }
+        .box-3 { background: #66f; opacity: 0.3; }
+        .box-4 { background: #66f; opacity: 0.4; }
+        .box-5 { background: #66f; opacity: 0.5; }
+        .box-6 { background: #66f; opacity: 0.6; }
+        .box-7 { background: #66f; opacity: 0.7; }
+        .box-8 { background: #66f; opacity: 0.8; }
+        .box-9 { background: #66f; opacity: 0.9; }
+        .box-10 { background: #66f; opacity: 1; }
+
+        /** rotate *************************************************/
+
+        #wrap2 .box:hover {
+            transform: rotate(135deg);
+            opacity: 1;
+        }
+        
+        /** rotateX, rotatey **************************************/
+
+        #wrap3 .box,
+        #wrap4 .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 300px;
+            transition: all 1s;
+            background: #3ac;
+            color: #fff;
+            font-size: 30px;
+        }
+        #wrap3 .box:hover {
+            transform: rotateX(180deg);
+        }
+        #wrap4 .box:hover {
+            transform: rotateY(180deg);
+        }
+
+        /** skew, skewX, skewY ************************************/
+
+        #wrap5 .box,
+        #wrap6 .box,
+        #wrap7 .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 300px;
+            background: #3ac;
+            color: #fff;
+            font-size: 30px;
+            transition: all 1s;
+        }
+        #wrap5 .box:hover { transform: skew(30deg, 20deg); }
+        #wrap6 .box:hover { transform: skewX(30deg); }
+        #wrap7 .box:hover { transform: skewY(20deg); }
+
+        /** translate ********************************************/
+
+        #wrap8 .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 300px;
+            background: #3ac;
+            color: #fff;
+            font-size: 30px;
+            transition: all 1s;
+        }
+        #wrap8 .box:hover { transform: translate(300px, 0); }
+
+        /** matrix ********************************************/
+
+        #wrap9 .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 300px;
+            background: #3ac;
+            color: #fff;
+            font-size: 30px;
+            transition: all 1s;
+        }
+
+        /* transform: matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) */
+        
+        #wrap9 #matrixDefault:checked ~ .box { transform: matrix(1, 0, 0, 1, 0, 0); }
+        #wrap9 #matrixScale:checked ~ .box { transform: matrix(1.5, 0, 0, 1.5, 0, 0); }
+        #wrap9 #matrixSkew:checked ~ .box { transform: matrix(1, 1.2, -.5, 1, 0, 0); }
+        #wrap9 #matrixTranslate:checked ~ .box { transform: matrix(1, 0, 0, 1, 300, 0) }
+
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+    <div id="wrap1">
+        <h2>(1) transform: scale();</h2>
+        <div class="box box-1 box-scale">opacity: 0.1</div>
+        <div class="box box-2 box-scale">opacity: 0.2</div>
+        <div class="box box-3 box-scale">opacity: 0.3</div>
+        <div class="box box-4 box-scale">opacity: 0.4</div>
+        <div class="box box-5 box-scale">opacity: 0.5</div>
+        <div class="box box-6 box-scale">opacity: 0.6</div>
+        <div class="box box-7 box-scale">opacity: 0.7</div>
+        <div class="box box-8 box-scale">opacity: 0.8</div>
+        <div class="box box-9 box-scale">opacity: 0.9</div>
+        <div class="box box-10 box-scale">opacity: 1</div>
+    </div>
+    <br>
+    <div id="wrap2">
+        <h2>(2) transform: rotate();</h2>
+        <div class="box box-1 box-scale">rotate(135deg)</div>
+        <div class="box box-2 box-scale">rotate(135deg)</div>
+        <div class="box box-3 box-scale">rotate(135deg)</div>
+        <div class="box box-4 box-scale">rotate(135deg)</div>
+        <div class="box box-5 box-scale">rotate(135deg)</div>
+        <div class="box box-6 box-scale">rotate(135deg)</div>
+        <div class="box box-7 box-scale">rotate(135deg)</div>
+        <div class="box box-8 box-scale">rotate(135deg)</div>
+        <div class="box box-9 box-scale">rotate(135deg)</div>
+        <div class="box box-10 box-scale">rotate(135deg)</div>
+    </div>
+    <br>
+    <div id="wrap3">
+        <h2>(3) transform: rotateX();</h2>
+        <div class="box">rotateX(180deg)</div>
+    </div>
+    <br>
+    <div id="wrap4">
+        <h2>(4) transform: rotateY();</h2>
+        <div class="box">rotateX(180deg)</div>
+    </div>
+    <br>
+    <div id="wrap5">
+        <h2>(5) transform: skew();</h2>
+        <div class="box">skew(30deg, 20deg)</div>
+    </div>
+    <br>
+</body>
+    <div id="wrap6">
+        <h2>(6) transform: skew();</h2>
+        <div class="box">skewX(30deg)</div>
+    </div>
+    <br>
+    <div id="wrap7">
+        <h2>(7) transform: skew();</h2>
+        <div class="box">skewY(20deg)</div>
+    </div>
+    <br>
+    <div id="wrap8">
+        <h2>(8) transform: translate(x, y);</h2>
+        <div class="box">translate(300px, 0)</div>
+    </div>
+    <br>
+    <div id="wrap9">
+        <h2>(9) transform: matrix(n, n, n, n, n, n);</h2>
+        <h4>matrix( scaleX(), skewY(), skewX(), skewY(), translateX(), translateY() )</h4>
+        <!-- transform: matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) -->
+        <input type="radio" name="matrix" id="matrixDefault" value="matrixDefault" checked>
+        <label for="matrixDefault">matrixDefault(초기화)</label>
+
+        <input type="radio" name="matrix" id="matrixScale" value="matrixSkale">
+        <label for="matrixScale">matrixScale(줌효과)</label>
+
+        <input type="radio" name="matrix" id="matrixSkew" value="matrixSkew">
+        <label for="matrixSkew">matrixSkew(기울기효과)</label>
+
+        <input type="radio" name="matrix" id="matrixTranslate" value="matrixTranslate">
+        <label for="matrixTranslate">matrixTranslate(이동효과)</label>
+
+        <div class="box">matrix</div>
+    </div>
+</body>
+</html>

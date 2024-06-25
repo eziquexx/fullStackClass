@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 요소2</title>
+</head>
+<body>
+    <!--
+        div태그 사용. div태그는 블록요소.
+        p태그 사용. p태그는 블록요소.
+        블록요소 안에 블록요소 사용 가능.
+        아래 예시는 지난 학습 복습. p127
+    -->
+    <h2>블록요소 안에 블록요소 예시</h2>
+    <div style="background-color: aqua;">
+        <p>다양한 종류의 <kbd>디지털 환경</kbd>을 이해하고 제공하고자하는 서비스, <i>콘텐츠의</i> 기획과 분석을 바탕으로 인터페이스(UI)는 물론 사용자경험(UX)까지 고려한 모바일 앱&웹 디자인
+        </p>
+        <h1>실무</h1>
+        <p>
+            실무 중심의 수업으로 전문적인 <u>포트폴리오</u>를 완성하고 전문성을 지닌 인력 양성 교육
+        </p>
+    </div>
+
+    <!--
+        figure태그 사용. figure태그는 삽화나 다이어그램, 사진 등과 같이 문서의 주요 흐름과는 독립적인 콘텐츠를 정의할 때 사용.
+        img태그 사용.
+        figcatipn 사용. figcaption태그는 이미지나 다이어그램, 사진과 같이 문서의 주요 흐름과는 독립적인 콘텐츠를 정의하는 figure 요소의 첫 번째 자식 요소이거나 마지막 자식 요소로만 위치할 수 있다.
+        p.128
+    -->
+    <h2>figure 태그, figcaption 태그</h2>
+    <figure style="background-color: bisque;">
+       <img src="../img/blog-post-img4.jpg" alt="프론트 엔드" style="width: 600px;">
+       <figcaption>프론트 엔드 웹 코딩 작업</figcaption> 
+    </figure>
+
+    <!--
+        blockquote태그 사용.
+        p.129
+    -->
+    <h2>blockquote 태그</h2>
+    <blockquote>
+        "This is a quote from the article on example.com."
+        <cite>Example Article</cite>
+    </blockquote>
+    <br>
+    <blockquote cite="http://www.naver.com">
+        다양한 종류의 디지털 환경을 이해하고 제공하고자하는 서비스, 콘텐츠의 기획과 분석을 바탕으로 인터페이스(UI)는 물론 사용자경험(UX)까지 고려한 모바일 앱&웹 디자인과 퍼블리싱
+    </blockquote>
+    <br>
+    <p style="background-color: greenyellow;">
+        다양한 종류의 디지털 환경을 이해하고 제공하고자하는 서비스, 콘텐츠의 기획과 분석을 바탕으로 인터페이스(UI)는 물론 사용자경험(UX)까지 고려한 모바일 앱&웹 디자인과 퍼블리싱
+    </p>
+        
+    <!--
+        address 태그 사용.
+        기본 모양은 기울임꼴.
+        p.129
+    -->
+        <h2>address 태그</h2>
+        <address>
+            연세아이티<br>
+            대표: 홍길동 | 주소: 경기도 수원특례시 장안구 영화동<br>
+            사업자변호: 123-456-789
+            <a href="mailto:borgssam@gmail.com">김상목</a><br>
+            <a href="tel:01024520226">010-2452-0226</a><br>
+            Copyright & copy; ysit.
+        </address>
+                
+    <!--
+        pre 태그 사용.
+        hr 태그 사용.
+        p.130, p.131
+    -->
+    <h2>pre 태그</h2>
+    <p style="background-color: greenyellow;">
+        다양한 종류의 디지털 환경을 이해하고 제공하고자하는 서비스, 콘텐츠의 기획과 분석을 바탕으로 인터페이스(UI)는 물론 사용자경험(UX)까지 고려한 모바일 앱&웹 디자인과 퍼블리싱
+    </p>
+    <hr>
+    <pre>
+        다양한 종류의 디지털 환경을 이해하고 제공하고자하는 서비스, 콘텐츠의 기획과 분석을 바탕으로 인터페이스(UI)는 물론 사용자경험(UX)까지 고려한 모바일 앱&웹 디자인과 퍼블리싱
+    </pre>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자5</title>
+    <style>
+        ul { list-style: circle; }
+        ul li { line-height: 30px; }
+        /* 
+        ul li:nth-child(1) {
+            color: brown;
+            background-color: burlywood;
+        } 
+        */
+
+        /* 
+        ul li:nth-child(3n+2), ul li:nth-child(4n+4) {
+            color: brown;
+            background-color: burlywood;
+        }
+        */
+
+        /* 홀수만
+        ul li:nth-child(odd) {
+            color: brown;
+            background-color: burlywood;
+        }
+        */
+
+        ul li:nth-child(even) { /*짝수만*/
+            color: brown;
+            background-color: burlywood;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--
+        p.227
+     -->
+    <h3>파스타면의 종류</h3>
+    <ul>
+        <li>스파게티</li>
+        <li>링귀네</li>
+        <li>부가티나</li>
+        <li>탈리아텔레</li>
+        <li>페투치네</li>
+        <li>라자냐</li>
+        <li>펜네</li>
+        <li>푸실리</li>
+    </ul>
+</body>
+</html>

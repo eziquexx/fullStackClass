@@ -1,0 +1,65 @@
+
+
+body { background-color: #b5d5ff; }
+h2#title { 
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+form.gaip_form {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+ul.gaipIdPw_Wrap {
+    padding: 40px;
+}
+ul.gaipIdPw_Wrap > li {
+    display: block;
+    margin: 0 0 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul.gaipIdPw_Wrap li.wrap1 label {
+    display: block;
+    margin-bottom: 6px;
+}
+ul.gaipIdPw_Wrap li.wrap1 label i { color: red; }
+ul.gaipIdPw_Wrap li.wrap1 input {
+    display: block;
+    width: 220px;
+    height: 24px;
+}
+ul.gaipIdPw_Wrap button {
+    display: block;
+    padding: 6px 14px;
+    margin-top: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(224, 224, 224);
+    cursor: pointer;
+}
+.birthWrap_wrap input { margin-bottom: 4px; }
+
+.gender_wrap h2,
+.wrap2 h2 {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gender_wrap .gender label,
+.choose label {
+    font-size: 14px;
+    font-weight: 600;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 연습 4</title>
+    <style>
+        form input[type="number"] {
+            width: 200px;
+            height: 40px;
+            font-size: 30px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        form input[type="number"]:hover {
+            background-color: burlywood;
+        }
+        form input:in-range { /*범위내인 경우에만 선택*/
+            color: #00c;
+            background-color: yellow;
+        }
+
+        form input[type="email"] {
+            width: 500px;
+            height: 42px;
+            font-size: 17px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: yellow;
+        }
+        form input:invalid { /*email. 유효하지 않은 값을 갖은 경우*/
+            color: #c00;
+            background-color: aqua;
+            border: 1px solid #c00
+        }
+
+        form p {
+            font-size: 16px;
+            text-align: center;
+
+        }
+        /* 
+        form p:lang(ko) {
+            color: blue;
+            font-size: 30px;
+        }
+        */
+        form p:lang(ko) {
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="num">근무경력</label>
+        <input type="number" name="num" id="num" min="1" max="10" value="3"><br>
+        <input type="text" name="num2" id="num2" value="3"><br>
+        <input type="email" name="mail" id="mail">
+        <input type="email" name="mail2" id="mail2">
+        <p lang="en">미국</p>
+        <p lang="ko">한국</p>
+        <p lang="uk">영국</p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img, a, abbr, button, em/i/storng/b, dfn, code, cite, br, bdo, abbr 태그 사용</title>
+    <script>
+        function func(){
+            alert('자바스크립트 호출');
+        }
+    </script>
+    <style>
+        h2 { background-color: blanchedalmond; }
+        hr { margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <!--
+        em태그, i태그 사용
+        strong태그, b태그 사용
+    -->
+    <h2>em태그, i태그, strong태그, b태그</h3>
+    <p><em>동해물</em>과 백두산이</p>
+    <p>동해물과 <i>백두산</i>이</p>
+    <p><strong>동해물</strong>과 백두산이</p>
+    <p>동해물과 <b>백두산</b>이</p>
+    <hr>
+    <!--
+        dfn태그 사용
+        용어를 정의할 때 사용한다.
+        Definition 약어.
+        정의 요소를 의미하고 콘텐츠 내에서 용어에 대한 정의와 설명도 포함되어야 한다.
+    -->
+    <h2>dfn태그</h2>
+    <p><dfn><abbr title="HyperText Markup Language">HTML5</abbr></dfn>는 웹 표준 웹 문서를 제작하는데 필요한 프레임 워크 입니다.</p>
+    <hr>
+
+    <!--
+        code 태그 사용
+        문서에서 일부 텍스트를 컴퓨터 코드로 정의한다.
+        내부 내용은 브라우저의 기본 고정 폭 글꼴로 표시된다.
+    -->
+    <h2>code태그</h2>
+    <p>HTML에서 사용되는 <code>button</code> 태그는 클릭 이벤트 버튼 입니다.</p>
+    <p>그리고 CSS <code>background-color</code> 는 배경 색상을 지정 합니다.</p>
+    <hr>
+
+    <!--
+        cite태그 사용
+        책, 논문, 영화, TV 프로그램, 노래, 게임, 시, 그림, 조각 등의 제목을 정의한다.
+        창작물에 대한 참조를 설정한다.
+        이텔릭체로 표시된다.
+    -->
+    <h2>cite태그</h2>
+    <P>동해물과 <cite>책입니다</cite> 백두산이 마르고 닳도록 <cite>논문이니다</cite> 하느님이 보우하사 우리나라 만세</P>
+    <hr>
+
+    <!--
+        button태그 사용
+    -->
+    <h2>button태그</h2>
+    <button type="button">Click 버튼</button><br>
+    <button>Click 버튼</button>
+    <hr>
+
+    <!--
+        br태그 사용
+        줄바꿈
+    -->
+    <h2>br태그</h2>
+    <p>동해물과 백두산이<br>마르고 닳도록<br>하느님이 보우하사<br>우리나라 만세</p>
+    <hr>
+
+    <!--
+        bdo태그 사용
+        dir속성에 속성값을 rtl(우측에서 좌측으로 텍스트 방향 변경), ltr(좌측에서 우측으로 텍스트 방향 변경)
+    -->
+    <h2>bdo태그</h2>
+    <p><bdo dir="rtl">동해물과 백수산이</bdo></p>
+    <p><bdo dir="ltr">동해물과 백수산이</bdo></p>
+    <hr>
+
+    <!--
+        abbr태그 사용
+        abbreviation 약어이다.
+        속성으로 tooltip 사용
+    -->
+    <h2>abbr태그</h2>
+    <abbr title="강아지는 개의 새끼를 지칭하는 말이니다.">강아지</abbr>
+    <hr>
+
+    <!--
+        자바스크립트 함수 호출
+        head태그에 script 작성하면 됨
+    -->
+    <h2>javaScript 경고창 띄우기와 a태그의 href속성 막기</h2>
+    <p><a href="javascript:func();" title="자바스크립트 함수 호출">자바스크립트 함수 호출</a></p>
+    
+    <!--
+        자바스크립트 경고창 띄우기
+    -->
+    <p><a href="javascript: alert('hello world');">hello world</a></p>
+    
+    <!--
+        자바스크립트 사용하여 href기능 없애기
+        void(0) 생략하여 사용 가능함
+        javascript: void(0); ---- > javascript:;
+    -->
+    <p><a href="javascript: void(0);">웹페이지 이동 이벤트 막는 방법</a></p>
+
+    <hr>
+
+    <!--
+        image에 링크 걸기
+     -->
+    <h2>a태그, img태그</h2>
+    <p>
+        <a href="http://www.naver.com"><img src="./images/naver.png" alt="네이버 로고"></a>
+    </p>
+
+    <hr>
+    
+    <!--
+        a태그 사용
+    -->
+    <h2>a태그</h2>
+    <p>
+        <a href="#a8" target="_self">a8</a>
+    </p>
+    <p id="a1">a01 Lorem, ipsum dolor sit amet consectetur adipisicing elit. A atque corporis provident ipsam adipisci accusamus neque ad, iusto hic culpa aperiam natus nisi commodi nulla? Unde nesciunt ex velit ipsam.</p>
+    <p id="a2">a02 Ea et cum ab quos. Necessitatibus, iusto blanditiis labore, iste, debitis voluptatibus atque beatae magnam aliquid aperiam temporibus error architecto. Harum suscipit ad qui! Voluptatem dolore sit neque nemo aperiam.</p>
+    <p id="a3">a03 Itaque ratione tenetur eveniet earum doloribus dolore, maxime pariatur autem quam cum excepturi facilis totam veritatis obcaecati vero repellendus. Repudiandae similique sit laborum ab dolores nostrum neque, minima placeat vel.</p>
+    <p id="a4">a04 Neque possimus illum illo omnis maxime architecto dolore ut consectetur adipisci cum harum accusamus dolores, perspiciatis vel soluta incidunt voluptas error explicabo. Molestias hic eius ad? Magnam, sequi. Cum, deleniti?</p>
+    <p id="a5">a05 Vero fuga quo voluptatum temporibus! Labore quaerat consectetur ullam illo, iste consequatur quidem sed delectus assumenda accusamus, velit, ipsum tempora atque eos soluta. Animi suscipit placeat corporis explicabo, blanditiis assumenda?</p>
+    <p id="a6">a06 Corporis ut itaque voluptatum sit. Dignissimos molestiae nostrum culpa asperiores sint mollitia quae sed numquam, earum consequuntur fugit rem eius possimus hic! Blanditiis autem deserunt ullam fuga, harum voluptatibus cupiditate?</p>
+    <p id="a7">a07 Provident quae, ea fugit vitae totam sunt minus amet explicabo quaerat magni cupiditate culpa nulla eum fugiat ad quam sapiente eos vel quia neque quod eaque nobis. Natus, voluptatum eos.</p>
+    <p id="a8">a08 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a9">a09 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a10">a10 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a11">a11 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a12">a12 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a13">a13 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a14">a14 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+    <p id="a15">a15 Minus repellendus obcaecati tempora cum inventore itaque laudantium recusandae. Voluptatem nisi consectetur totam commodi, ad eligendi possimus animi quasi atque, assumenda culpa in illum labore quidem, ducimus ipsum. Molestias, debitis.</p>
+</body>
+</html>

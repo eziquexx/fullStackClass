@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 활용 5</title>
+    <style>
+        * { padding: 0; margin: 0;}
+        h2 { background-color: blanchedalmond; margin: 0 0 10px; font-size: 20px; padding-left: 10px;}
+        hr { margin: 20px 0; } 
+    </style>
+</head>
+<body>
+
+    <!--
+        kbd태그 사용.
+        Keyboard Input의 의미.
+        텍스트 입력 장치(키보드)에서 사용자 입력을 나타내는 텍스트 범위를 설정 정의함.
+    -->
+    <h2>kbd태그 - kbd태그 감싼 것과 아닌 거 차이점</h2>
+    <p>
+        Lorem ipsum, <kbd>Ctrl</kbd><kbd>+</kbd><kbd>B</kbd> adipisicing elit. <br>
+        Lorem ipsum, Ctrl+B adipisicing elit.
+    </p>
+        
+    <hr>
+        
+    <!--
+        label태그 사용.
+        for속성에 속성값을 input태그의 id값과 동일하게 넣어주면 된다.
+        텍스트 상자 외에 이름: 이라는 글자를 선택해도 텍스트 입력 상자가 활성화된다.
+    -->
+    <h2>label태그</h2>
+    <div><label for="idn">이름: </label><input type="text" name="" id="idn"></div>
+    
+    <hr>
+
+    <!--
+        label태그 사용.
+        for속성에 속성값을 input태그의 id값과 동일하게 넣어주면 된다.
+        텍스트 상자 외에 이름: 이라는 글자를 선택해도 텍스트 입력 상자가 활성화된다.
+    -->
+    <h2>label태그</h2>
+    <div>
+        <input type="radio" name="" id="male">
+        <label for="male">남성</label>
+        <input type="radio" name="" id="female" checked>
+        <label for="female">여성</label>
+    </div>
+</body>
+</html>

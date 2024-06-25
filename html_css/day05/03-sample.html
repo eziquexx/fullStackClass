@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        h2 { text-align: center; }
+        div {
+            border: 1px solid #ccc;
+            margin: 30px auto;
+            width: 70%;
+            height: 100px;
+        }
+        #box1 { box-shadow: 6px 5px 12px rgba(0, 100, 130, .25); }
+        #box2 { box-shadow: -6px 06px 12px rgba(200, 0, 150, .25); }
+        #box3 { box-shadow: 0 6px 12px rgba(100, 200, 0, .25); }
+        #box4 { 
+            box-shadow: 0 6px 12px rgba(100, 150, 0, .25),
+                        0 -6px 12px rgba(200, 150, 0, .25); 
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        box-shadow
+        p.268
+    -->
+        <h2>실습 box-shadow 그림자 효과</h2>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a 태그</title>
+    <style>
+        /* a:link { color: #333; text-decoration: none; }
+        a:visited { color: blue; }
+        a:hover { text-decoration: underline; color:green; }
+        a:focus { text-decoration: overline; color: orange; outline: 0; }
+        a:active { background-color: maroon; text-decoration: none; }
+
+        #box:after {
+            content: "안녕히가세요";
+            color: #0c0;
+        }
+        #box:before {
+            content: "안녕하세요";
+            color: rgb(56, 110, 11);
+        } */
+
+        a[href^="https"] { background-color: skyblue; }
+        a[href$="com"] { text-decoration: line-through; }
+        a[target=_self] { color: pink; }
+    </style>
+</head>
+<body>
+    <!-- 
+        a태그
+        a:link 방문하지 않은 링크 선택(한번도 클릭안 한 링크)
+        a:visited 방문한 링크 선택(한번 이상 클릭한 링크)
+        a:hover 링크 위로 마우스를 가져갈 때 링크를 선택(마우스 오버 시)
+        a:focus 포커스를 받을 때 선택(탭 키 눌러서 선택)
+        a:active 활성 링크를 선택(클릭해서 이동하는 순간)
+
+        a:after #box 요소의 이후를 지정 선택
+        a:before #box 요소의 이전을 지정 선택
+        p.211, p.212
+    -->
+    <div id="box">
+        <p><a href="http://naver.com" target="_blank">네이버</a></p>
+        <p><a href="https://daum.net" target="_blank">다음</a></p>
+        <p><a href="http://google.com" target="_self">구글</a></p>
+        <p><a href="http://hrd.go.kr">HRD</a></p>
+        <p><a href="https://kt.co.kr">kt</a></p>
+    </div>
+    <div id="a1"></div>
+    <div id="a2"></div>
+    <div id="a3"></div>
+    <div id="a4"></div>
+    <div id="a5"></div>
+</body>
+</html>

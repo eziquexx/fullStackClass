@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * { margin: 0; padding: 0; } */
+        body {
+            width: 960px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        #header { background-color: yellowgreen; }
+        #nav { background-color: brown; }
+        #aside {
+            width: 200px;
+            float: left;
+            background-color: aqua;
+        }
+        #section {
+            width: 760px;
+            float: left;
+            background-color: blueviolet;
+        }
+        #wrap {
+            overflow: hidden;
+        }
+        #footer { background-color: cyan; }
+    </style>
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="nav">navigation</div>
+    <div id="wrap">
+        <div id="aside">
+            <ul>
+                <li>java</li>
+                <li>C/C++</li>
+                <li>phyton</li>
+                <li>javascript</li>
+                <li>c#</li>
+            </ul>
+        </div>
+        <div id="section">
+            <p>section</p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore fugiat, dolor atque delectus, quas impedit nihil nobis tempore aliquid praesentium magnam illo dolorum dolorem molestiae iste optio voluptatibus est.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi debitis facere harum, facilis voluptatibus quibusdam saepe praesentium porro ipsam officiis molestias necessitatibus modi? Magnam atque maxime autem architecto officiis.
+            </p>
+        </div>
+    </div>
+    <div id="footer">footer</div>
+</body>
+</html>

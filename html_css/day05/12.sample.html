@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .border-radius { width: 200px; height:100px; }
+
+        .border-radius-1 { border-radius: 30px; border: 1px solid grey; }
+        .border-radius-2 { border-radius: 30px 0; border: 1px solid brown; }
+        .border-radius-3 { border-radius: 0 30px; border : 1px solid blue; }
+        .border-radius-4 { border-radius: 0 10px 20px 30px; border: 1px solid green; }
+        .border-radius-5 { border-radius: 100px; border: 1px solid skyblue; }
+        .border-radius-6 { border-radius: 0 100px 100px 0; border: 1px solid brown; }
+        .border-radius-7 { border-radius: 100px 0 0 100px; border: 1px solid green; }
+        .border-radius-8 { width: 100px; height: 100px; border-radius: 100px; border: 1px solid purple; }
+    </style>
+</head>
+<body>
+    <h3>** border-radius: 30px;</h3>
+    <div class="border-radius border-radius-1"></div>
+    <br>
+    <h3>** border-radius: 30px 0;</h3>
+    <div class="border-radius border-radius-2"></div>
+    <br>
+    <h3>** border-radius: 0 30px;</h3>
+    <div class="border-radius border-radius-3"></div>
+    <br>
+    <h3>** border-radius: 0 10px 20px 30px;</h3>
+    <div class="border-radius border-radius-4"></div>
+    <br>
+    <h3>** border-radius: 100px;</h3>
+    <div class="border-radius border-radius-5"></div>
+    <br>
+    <h3>** border-radius: 0 100px 100px 0;</h3>
+    <div class="border-radius border-radius-6"></div>
+    <br>
+    <h3>** border-radius: 100px 0 0 100px;</h3>
+    <div class="border-radius border-radius-7"></div>
+    <br>
+    <h3>** border-radius: 100px;</h3>
+    <div class="border-radius border-radius-8"></div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 연습</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+
+        .grid-container {
+            width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            column-gap: 10px;
+            row-gap: 10px;
+            /* background-color: #ddd; */
+            padding: 10px;
+        }
+        .grid-container2 {
+            width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            column-gap: 10px;
+            row-gap: 10px;
+            /* background-color: #ddd; */
+            padding: 10px;
+        }
+        .item {
+            /* background-color: #fff; */
+            padding: 10px;
+        }
+
+        .table_grid .title {
+            width: 100%;
+            height: 23px;
+            position: relative;
+            border-bottom: 1px solid #ddd;
+            padding: 2px;
+        }
+        .title h1 {
+            float: left;
+            font-size: 18px;
+            color: green;
+            border-bottom: 1px solid #000;
+        }
+        .title a {
+            display: block;
+            float: right;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .body {
+            font-size: 12px;
+            padding: 4px;
+        }
+        .body ul { overflow: hidden; }
+        .body ul li {
+            overflow: hidden;
+            padding: 3px 0;
+        }
+        .body ul li span.body_des {
+            display: block;
+            width: 68%;
+            float: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #555;
+        }
+        .body ul li span.body_des::before {
+            content: '· ';
+        }
+        .body ul li span.body_date {
+            display: block;
+            /* width: 20%; */
+            float: right;
+            color: #555;
+        }
+
+
+        /* cs center */
+        .cscenter h1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom:4px;
+        }
+        .cscenter span {
+            display: block;
+            width: 100%;
+            padding: 2px 0;
+        }
+        .cscenter .txt1 {
+            font-size: 12px;
+            color: #444;
+        }
+        .cscenter .txt2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .cscenter .txt3 {
+            font-size: 13px;
+            color: #444;
+        }
+        .cscenter span img {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+        }
+        
+
+        /* grid-container2 */
+        .grid-container2 > h1 {
+            display: block;
+            width: 100%;
+            height: 30px;
+        }
+        .grid-container2 .item_title {
+            grid-column: 1 / 4;
+        }
+        .grid-container2 .view_title {
+            height: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        .grid-container2 .view_text {
+            display: block;
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+        }
+     
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item notice table_grid">
+            <div class="notice_title title">
+                <h1>공지사항</h1>
+                <a href="#">더보기 +</a>
+            </div>
+            <div class="notice_body body">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="body_des">웹표준으로 제작되어 스마트폰에서도 이상이 없습니다.</span>
+                            <span class="body_date">2014-11-25</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="body_des">웹표준으로 제작되어 스마트폰에서도 이상이 없습니다.</span>
+                            <span class="body_date">2014-11-25</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="body_des">웹표준으로 제작되어 스마트폰에서도 이상이 없습니다.</span>
+                            <span class="body_date">2014-11-25</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item cscenter">
+            <h1>고객센터</h1>
+            <span class="txt1">전화상담 가능시간: 오전 09시 ~ 오후 06시</span>
+            <span class="txt2"><img src="./img/phon_icon.png" alt="">070-000-0000</span>
+            <span class="txt3">농협 000-0000-00000-00 홍길동</span>
+        </div>
+
+
+        <div class="item qna table_grid">
+            <div class="qna_title title">
+                <h1>고객문의</h1>
+                <a href="#">더보기 +</a>
+            </div>
+            <div class="qna_body body">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="body_des">겨울에도 바벸큐시설이 이용이 가능하나요?</span>
+                            <span class="body_date">2014-11-25</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="body_des">겨울에도 바벸큐시설이 이용이 가능하나요?</span>
+                            <span class="body_date">2014-11-25</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="body_des">겨울에도 바벸큐시설이 이용이 가능하나요?</span>
+                            <span class="body_date">2014-11-25</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container2">
+        
+        <div class="item item_title">
+            <div class="view_title title">
+                <h1>시설보기</h1>
+                <a href="#">더보기 +</a>
+            </div>
+        </div>
+        <div class="item item_img1">
+            <a href="#"><img src="http://placehold.it/300x220" alt=""></a>
+            <span class="view_text">샘플사진</span>
+        </div>
+        <div class="item item_img2">
+            <a href="#"><img src="http://placehold.it/300x220" alt=""></a>
+            <span class="view_text">샘플사진</span>
+        </div>
+        <div class="item item_img3">
+            <a href="#"><img src="http://placehold.it/300x220" alt=""></a>
+            <span class="view_text">샘플사진</span>
+        </div>
+        <div class="item item_img4">
+            <a href="#"><img src="http://placehold.it/300x220" alt=""></a>
+            <span class="view_text">샘플사진</span>
+        </div>
+        <div class="item item_img5">
+            <a href="#"><img src="http://placehold.it/300x220" alt=""></a>
+            <span class="view_text">샘플사진</span>
+        </div>
+        <div class="item item_img6">
+            <a href="#"><img src="http://placehold.it/300x220" alt=""></a>
+            <span class="view_text">샘플사진</span>
+        </div>
+        
+    </div>
+</body>
+</html>

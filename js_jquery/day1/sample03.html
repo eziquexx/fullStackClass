@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function writeln(text){
+            const logDiv = document.getElementById('log');
+            // 새 로그 항목을 생성합니다.
+            const newLogEntry = document.createElement('div');
+            newLogEntry.textContent = text; // 로그 항목에 텍스트를 설정합니다.
+            logDiv.appendChild(newLogEntry); // 로그 div에 새 로그 항목을 추가합니다.
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // writeln("강아지");
+        // writeln(3+4);
+
+        let num1; //변경가능
+        var num2; //변경가능
+        const num3 = 3; //변경불가
+        //변수 이름은 알파벳 + 숫자 + 특수기호(_)
+        //숫자는 맨 앞에 못 오는 경우가 많다.
+
+        // let 3num; x 안됨
+        let _num;
+
+        //카멜 표기, 파스칼, 케밥, 스네이크
+        let goodMan; //카멜(낙타) 변수, 함수
+        let GoodMan; //파스칼: 클래스
+        let good_man; //필드명
+        // let good-man; //사용자 정의 태그
+
+        let num01;
+        num01 = 5;
+        writeln(num01);
+
+        let num02 = 10;
+        writeln(num02);
+
+        writeln(num01 + num02);
+
+        writeln2(num02);
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-color & background-image</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        h2 { margin-bottom: 10px; }
+        .wrap { margin-bottom: 50px; }
+        .wrap ul li {
+            display: block;
+            width: 100%;
+            height: 100px;
+            list-style: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-indent: 10px;
+        }
+        .wrap ul li:nth-child(1) { margin-bottom: 10px; }
+
+        #wrap1 ul li:nth-child(1) { background-color: #9af; }
+        #wrap1 ul li:nth-child(2) { background-color: rgba(0, 0, 255, .1); }
+        
+        #wrap2 ul li:nth-child(1) { background-image: linear-gradient(red, green, blue); }
+        #wrap2 ul li:nth-child(2) { background-image: linear-gradient(to right, red, blue); }
+        
+        #wrap3 ul li:nth-child(1) { background-image: linear-gradient(to bottom, red, blue); }
+        #wrap3 ul li:nth-child(2) { background-image: linear-gradient(to bottom right, red, blue); }
+
+        #wrap4 ul li:nth-child(1) { background-image: linear-gradient(180deg, red, blue); }
+        #wrap4 ul li:nth-child(2) { background-image: linear-gradient(120deg, red, blue); }
+
+        #wrap5 ul li:nth-child(1) { background-image: linear-gradient(to right, red, yellow, orange, green, blue, cyan); }
+        #wrap5 ul li:nth-child(2) { background-image: linear-gradient(to left, red, yellow, orange, green, blue, cyan); }
+
+        #wrap6 ul li:nth-child(1) { background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)); }
+        #wrap6 ul li:nth-child(2) { background-image: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0)); }
+        
+        #wrap7 ul li:nth-child(1) { background-image: radial-gradient(cyan, yellow, blue); }
+        #wrap7 ul li:nth-child(2) { background-image: radial-gradient(blue, yellow, cyan); }
+        
+        #wrap8 ul li { height:250px; background-repeat: no-repeat; background-position: 50% 50%, 0 0;}
+        #wrap8 ul li:nth-child(1) { background-image: url(../img/blog-post-img4.jpg); }
+        #wrap8 ul li:nth-child(2) { background-image: url(../img/html5_icon.png), url(../img/blog-post-img6.jpg); }
+
+        #wrap9 ul li:nth-child(1) {
+            height: 150px; 
+            background: url(../img/blog-post-img1.jpg) no-repeat 50% 0;
+            background-size: cover; 
+            text-align: center;
+            color: white;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 150px;
+        }
+
+        #wrap10 #section1 {
+            height: 300px;
+            background: url(../img/blog-post-img1.jpg) no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        #wrap10 #section2 {
+            height: 300px;
+            background: url(../img/blog-post-img2.jpg) no-repeat 50% 0 scroll;
+            background-size: cover;
+        }
+        #wrap10 #section3 {
+            height: 300px;
+            background: url(../img/blog-post-img3.jpg) no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        #wrap10 #section4 {
+            height: 300px;
+            background: url(../img/blog-post-img4.jpg) no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        background-color
+        p.272
+    -->
+
+    <div id="wrap1" class="wrap">
+        <h2>* background-color 설정하기</h2>
+        <ul>
+            <li>background-color 설정하기-1</li>
+            <li>background-color 설정하기-2</li>
+        </ul>
+    </div>
+
+    <div id="wrap2" class="wrap">
+        <h2>* background-image: linear-gradient 설정</h2>
+        <ul>
+            <li>background-image: linear-gradient(red, green, blue); 설정</li>
+            <li>background-image: linear-gradient(red, green, blue); 선형그라디언트</li>
+        </ul>
+    </div>
+
+    <div id="wrap3" class="wrap">
+        <h2>* background-image: linear-gradient(to bottom 컬러, 컬러)</h2>
+        <ul>
+            <li>background-image: linear-gradient(to botom red, blue); 설정</li>
+            <li>background-image: linear-gradient(to botom right, red, blue); 설정</li>
+        </ul>
+    </div>
+
+    <div id="wrap4" class="wrap">
+        <h2>* background-image: linear-gradient(180deg, red, blue) 실습</h2>
+        <ul>
+            <li>background-image: linear-gradient(180deg, red, blue); 설정</li>
+            <li>background-image: linear-gradient(120deg, red, blue); 설정</li>
+        </ul>
+    </div>
+
+    <div id="wrap5" class="wrap">
+        <h2>* background-image: linear-gradient(to right, 컬러, 컬러, ...) 실습</h2>
+        <ul>
+            <li>background-image: linear-gradient(to right, red, yellow, orange, green, blue, cyan); 설정</li>
+            <li>background-image: linear-gradient(to left, red, yellow, orange, green, blue, cyan); 설정</li>
+        </ul>
+    </div>
+
+    <div id="wrap6" class="wrap">
+        <h2>* background-image: 투명도 배경 컬러 rgba() 실습</h2>
+        <ul>
+            <li>background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)); 설정</li>
+            <li>background-image: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0)); 설정</li>
+        </ul>
+    </div>
+
+    <div id="wrap7" class="wrap">
+        <h2>* background-image: 원형그라디언트 실습</h2>
+        <ul>
+            <li>background-image: radial-gradient(cyan, yellow, blue); 설정</li>
+            <li>background-image: radial-gradient(blue, yellow, cyan); 설정</li>
+        </ul>
+    </div>
+
+    <div id="wrap8" class="wrap">
+        <h2>* background-image: url(이미지); 실습</h2>
+        <ul>
+            <li>background-image: url(../img/blog-post-img4.jpg); 설정</li>
+            <li>background-image: url(../img/html5_icon.png), url(../img/blog-post-img6.jpg); 설정</li>
+        </ul>
+    </div>
+
+    <div id="wrap9" class="wrap">
+        <h2>* background-image: 배경 이미지와 타이틀 텍스트 실전 실습</h2>
+        <ul>
+            <li>WEB PUBLISHER</li>
+        </ul>
+    </div>
+
+    <div id="wrap10" class="wrap">
+        <h2>* background-image: 배경 이미지와 타이틀 텍스트 실전 실습</h2>
+        <section id="section1">
+            <h3>WEB PUBLISHER</h3>
+        </section>
+        <section id="section2">
+            <h3>FRONTEND</h3>
+        </section>
+        <section id="section3">
+            <h3>BACKEND</h3>
+        </section>
+        <section id="section4">
+            <h3>WEB DESIGNER</h3>
+        </section>
+    </div>
+</body>
+</html>

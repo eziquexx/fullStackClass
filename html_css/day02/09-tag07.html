@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 활용 7</title>
+    <style>
+        h2 { background-color: blanchedalmond; margin: 0 0 10px; font-size: 20px; padding-left: 10px;}
+        hr { margin: 20px 0; } 
+    </style>
+</head>
+<body>
+
+    <!--
+        select 태그 사용.
+        size속성을 사용하여 보여지는 목록의 크기를 조절할 수 있다.
+    -->
+    <h2>select 태그</h2>
+    <select name="" id="">
+        <option value="">사과</option>
+        <option value="">배</option>
+        <option value="">포도</option>
+    </select>
+    <select name="" id="" size="2">
+        <option value="">사과</option>
+        <option value="">배</option>
+        <option value="">포도</option>
+    </select>
+    <select name="" id="" size="3">
+        <option value="">사과</option>
+        <option value="">배</option>
+        <option value="">포도</option>
+    </select>
+
+    <hr>
+
+    <!--
+        sub태그, sup태그 사용
+    -->
+    <h2>sub 태그, sup 태그</h2>
+    <div>H<sub>2</sub>O (sub태그 사용)</div>
+    <div>X<sup>2</sup> (sup태그 사용)</div>
+
+    <hr>
+
+    <!--
+        inst태그, u태그, del태그, s태그 사용
+    -->
+    <h2>ins태그, u태그, del태그, s태그 사용</h2>
+    <div><ins>1234</ins>(inst태그 사용) <u>1234</u>(u태그 사용)</div>
+    <div><del>1234</del>(del태그 사용) <s>1234</s>(s태그 사용)</div>
+
+    <hr>
+
+    <!--
+        ruby태그 사용
+        ruby태그 안에 rt태그로 윗주를 사용한다.
+    -->
+    <h2>ruby태그 사용</h2>
+    <div>
+        <ruby>동아시아 글자 표시됩니다.<rt>윗주글자(루비ruby)</rt></ruby><br>
+        <ruby>웹 퍼블리셔 <rt>프론트앤드(Frontend)</rt> HTML5 CSS3</ruby>
+    </div>
+</body>
+</html>

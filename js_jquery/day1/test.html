@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function writeln(...texts){
+            const logDiv = document.getElementById('log');
+            // 여러 텍스트 인자를 각각 처리합니다.
+            texts.forEach(text => {
+                const newLogEntry = document.createElement('div');
+                newLogEntry.textContent = text;
+                logDiv.appendChild(newLogEntry);
+            });
+        }
+        function writeln2(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        writeln2("강아지", 3+4);
+        writeln2(3+4);
+    </script>
+</body>
+</html>

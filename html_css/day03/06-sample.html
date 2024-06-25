@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 태그</title>
+    <style>
+        hr { margin: 50px 0; }
+
+        body { text-align: center; }
+        h1#title { color: orange; font-size: 50px; }
+        
+        /* ex1 style */
+        #ex1 header { width: 100%; height: 100px; background: #9cc;}
+        #ex1 main { width: 100%; height: 300px; background: #c99;}
+        #ex1 footer { width: 100%; height: 100px; background: #9c9;}
+
+        /* ex2 style */
+        #ex2 header { width: 100%; height: 100px; background: #9cc;}
+        #ex2 main { width: 100%; }
+        #ex2 main section { width: 100%; height: 200px; background: #c99; }
+        #ex2 footer { width: 100%; height: 100px; background: #9c9; }
+
+        /* ex3 style */
+        #ex3 header { width: 100%; height: 100px; background: #9cc;}
+        #ex3 main { width: 100%; }
+        #ex3 main section { width: 100% ;}
+        #ex3 main section article { width: 100%; height: 100px; background: #c99; }
+        #ex3 footer { width: 100%; height: 100px; background: #9c9; }
+
+        /* ex4 style */
+        #ex4 header { width: 100%; }
+        #ex4 header h1 { width: 100%; height: 50px; background: #8cc; }
+        #ex4 header nav { width: 100%; height: 70px; background: #ccc; }
+        #ex4 header aside { width: 100%; height: 50px; background: #c9c;}
+        #ex4 main { width: 100%; }
+        #ex4 main section { width: 100%; }
+        #ex4 main section article { width: 100%; height:100px; background: #c99;}
+        #ex4 footer { width: 100%; height: 100px; background: #9c9; }
+    </style>
+</head>
+<body>
+    <!--
+        p.164~p.170
+    -->
+    <h1 id ="title">시멘틱 태그</h1>
+    <div id="ex1">
+        <h2>* 웹 문서구조 시멘틱 태그 요소 header, main, footer 사용방법</h2>
+        <header>
+            <h1>헤더영역</h1>
+        </header>
+        <main>
+            <h1>메인영역</h1>
+        </main>
+        <footer>
+            <h1>푸터영역</h1>
+        </footer>
+    </div>
+
+    <hr>
+
+    <div id="ex2">
+        <h2>* 웹 문서구조 시멘틱 태그 요소 header, main, footer, section 사용방법</h2>
+        <header>
+            <h1>헤더영역</h1>
+        </header>
+        <main>
+            <section>
+                <h2>섹션1</h2>
+            </section>
+            <section>
+                <h2>섹션2</h2>
+            </section>
+            <section>
+                <h2>섹션3</h2>
+            </section>
+        </main>
+        <footer>
+            <h1>푸터영역</h1>
+        </footer>
+    </div>
+
+    <hr>
+
+    <div id="ex3">
+        <h2>웹 문서구조 시멘틱 태그 요소 header, main, footer, section, artiicle 사용방법</h2>
+        <header>
+            <h1>헤더영역</h1>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <h2>아티클1</h2>
+                </article>
+                <article>
+                    <h2>아티클2</h2>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2>아티클3</h2>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2>아티클4</h2>
+                </article>
+                <article>
+                    <h2>아티클5</h2>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <h1>푸터영역</h1>
+        </footer>
+    </div>
+
+    <hr>
+
+    <div id="ex4">
+        <h2>웹 문서구조 시멘틱 태그 요소 header, main, footer, section, article, nav, aside 사용방법</h2>
+        <header>
+            <h1>로고</h1>
+            <nav>
+                <h2>네비게이션 메인메뉴</h2>
+            </nav>
+            <aside>
+                <h2>사이드메뉴</h2>
+            </aside>
+        </header>
+
+        <main>
+            <section>
+                <article>
+                    <h2>아티클1</h2>
+                </article>
+                <article>
+                    <h2>아티클2</h2>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2>아티클3</h2>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2>아티클4</h2>
+                </article>
+                <article>
+                    <h2>아티클5</h2>
+                </article>
+            </section>
+        </main>
+        
+        <footer>
+            <h1>푸터영역</h1>
+        </footer>
+    </div>
+</body>
+</html>

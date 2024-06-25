@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:first-child, :first-of-type, :first-letter, :first-line 선택자</title>
+    <style>
+        div { text-align: center; }
+        div.ex1 p { color: #333; font-size: 14px; }
+        div.ex1 p:first-of-type {
+            color: blue;
+            font-size: 20px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        p:first-child 선택자
+        p:first-child : p요소 중 첫번째 요소 선택
+        p.220
+    -->
+    <div class="ex1">
+        <h1>네이버</h1>
+        <p>김일식</p>
+        <p>김이식</p>
+        <p>김삼식</p>
+        <p>김사식</p>
+        <p>김오식</p>
+    </div>
+    
+    <hr>
+
+    <div class="ex2">
+        <h1>네이버</h1>
+        <p>김일식</p>
+        <p>김이식</p>
+        <p>김삼식</p>
+        <p>김사식</p>
+        <p>김오식</p>
+    </div>
+</body>
+</html>

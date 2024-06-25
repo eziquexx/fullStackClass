@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Helvertica', sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+
+
+
+        
+        /*
+            mobile2
+        */
+        #main_header2 {
+            height: 45px;
+            position: relative;
+            background-color: orange;
+            box-shadow: 0 20px 60px rgba(150, 97, 0, 0.6);
+        }
+        #main_header2 .left2 {
+            position: absolute;
+            display: block;
+            width: 58px;
+            height: 32px;
+            left: 5px;
+            top: 7px;
+            background-color: #363636;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 6px;
+        }
+
+        #main_header2 h1 {
+            line-height: 45px;
+            text-align: center;
+            font-size: 28px;
+            color: #fff;
+        }
+
+        #main_header2 .right2 {
+            position: absolute;
+            display: block;
+            width: 32px;
+            height: 32px;
+            right: 5px;
+            top: 7px;
+            color: #fff;
+            background-color: #363636;
+            border-radius: 6px;
+        }
+        #main_header2 .right2 div.line2 {
+            width: 20px;
+            height: 3px;
+            background-color: #fff;
+            margin: 0 auto 3px;
+        }
+        #main_header2 .right2 div.line2:nth-child(1) {
+            margin-top: 8px;
+        }
+
+        /* #toggle_gnb_wrap2 */
+        #toggle_gnb_wrap2 {
+            background-color: rgb(224, 150, 13);
+            padding: 0 15px;
+        }
+        /* #toggle_gnb_wrap2 #toggle_gnb2 {
+            background-color: rgb(248, 183, 61);
+        } */
+        #toggle_gnb_wrap2 #toggle_gnb2 ul {
+            overflow: hidden;
+        }
+        #toggle_gnb_wrap2 #toggle_gnb2 ul li {
+            float: left;
+            width: 80px;
+            padding: 10px;
+            text-align: center;
+            transition: all .3s ease-in-out;
+        }
+        #toggle_gnb_wrap2 #toggle_gnb2 ul li a {
+            color: #fff;
+            transition: all .3s ease-in-out;
+        }
+        #toggle_gnb_wrap2 #toggle_gnb2 ul li:hover {
+            background-color: rgb(248, 183, 61)
+        }
+        #toggle_gnb_wrap2 #toggle_gnb2 ul li:hover a {
+            color: #000;
+        }
+
+        #toggle2 { display: none; } 
+        #toggle_gnb_wrap2 { display: none; }
+        #toggle2:checked + #wrap2 #toggle_gnb_wrap2 { display: block; }
+
+
+        /* 
+            상단내비
+        */
+        #top_gnb {
+            overflow: hidden;
+            background-color: rgb(255, 179, 39);
+            /* border-bottom: 1px solid rgb(117, 81, 13); */
+        }
+        #top_gnb  > div > a { 
+            float: left;
+            width: 25%;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #000;
+            transition: all .3s ease;
+        }
+        #top_gnb  > div > a:hover {
+            background-color: rgb(209, 156, 57);
+        }
+
+
+        /* 
+            하단내비
+        */
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid rgb(255, 207, 119);
+        }
+        #bottom_gnb > div {
+            display: table-cell;
+            position: relative;
+        }
+        #bottom_gnb > div > a {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #000;
+            background-color: #fff;
+
+        }
+        #bottom_gnb > div > a::before {
+            display: block;
+            content: '';
+            border-right: 1px solid rgb(255, 207, 119);
+            position: absolute;
+            width: 1px;
+            height: 20px; 
+            margin: auto;
+            top: 0;
+            bottom: 0;
+        }
+        #bottom_gnb > div > a:hover {
+            color: rgb(255, 179, 39);
+        }
+
+
+        /* 
+            본문
+        */
+        #main_section {
+            padding-bottom: 60px;
+        }
+        #section_header {
+            padding: 40px 20px 0;
+        }
+        #section_article {
+            padding: 30px 20px 0;
+        }
+
+
+        /* 
+            푸터
+        */
+        #main_footer {
+            padding: 30px;
+            border-top: 3px solid rgb(255, 207, 119);
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <input type="checkbox" name="" id="toggle2">
+    <div id="wrap2">
+        <header id="main_header2">
+            <a href="#" class="left2">Button</a>
+            <h1>Mobile2</h1>
+            <label for="toggle2" class="right2">
+                <div class="line2"></div>
+                <div class="line2"></div>
+                <div class="line2"></div>
+            </label>
+        </header>
+        <div id="toggle_gnb_wrap2">
+            <div id="toggle_gnb2">
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                    <li><a href="#">메뉴6</a></li>
+                    <li><a href="#">메뉴7</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav id="top_gnb">
+        <div><a href="#">TOP1</a></div>
+        <div><a href="#">TOP2</a></div>
+        <div><a href="#">TOP3</a></div>
+        <div><a href="#">TOP4</a></div>
+    </nav>
+    <nav id="bottom_gnb">
+        <div><a href="#">BOTTOM</a></div>
+        <div><a href="#">BOTTOM</a></div>
+        <div><a href="#">BOTTOM</a></div>
+        <div><a href="#">BOTTOM</a></div>
+        <div><a href="#">BOTTOM</a></div>
+    </nav>
+
+    <section id="main_section">
+        <header id="section_header">
+            <h2>테스트 웹사이트 입니다.</h2>
+            <time>2024-06-19</time>
+        </header>
+        <article id="section_article">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quibusdam consequatur nulla harum repellat repellendus voluptas soluta ad, cupiditate sequi, consequuntur deleniti, est ab totam deserunt labore rerum exercitationem commodi!
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque provident quisquam, officiis dolorem in voluptatum nostrum dolores! At dolorem obcaecati a nobis nisi minus molestiae esse excepturi temporibus, laboriosam quia!
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque provident quisquam, officiis dolorem in voluptatum nostrum dolores! At dolorem obcaecati a nobis nisi minus molestiae esse excepturi temporibus, laboriosam quia!
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque provident quisquam, officiis dolorem in voluptatum nostrum dolores! At dolorem obcaecati a nobis nisi minus molestiae esse excepturi temporibus, laboriosam quia!
+            </p>
+        </article>
+    </section>
+
+    <footer id="main_footer">
+        <h3>테스트 웹사이트</h3>
+        <address>수원시 장안구 영화동 123-12</address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Website</title>
+    <style>
+        /* RESET : 초기화 */
+        * { margin: 0; padding: 0; }
+        body { font-family: Arial, Helvetica, sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+
+        body { min-width: 720px; }
+
+        /* HEADER : 헤더 */
+        #main_header {
+            position: relative;
+            height: 60px;
+            line-height: 60px;
+            width: 100%;
+            background-color: rgb(15, 144, 196);
+            color: #fff;
+            text-indent: 10px;
+            border-bottom: 1px solid #000;
+        }
+
+        /* NAV : 내비게이션 */
+        #main_gnb {
+            overflow: hidden;
+            background-color: rgb(27, 123, 161);
+            border-bottom: 1px solid #000;
+        }
+
+        #main_gnb > .left {
+            overflow: hidden;
+            float: left;
+        }
+        #main_gnb > .left > li {
+            float: left;
+        }
+        #main_gnb > .right {
+            overflow: hidden;
+            float: right;
+        }
+        #main_gnb > .right > li {
+            float: left;
+        }
+
+        #main_gnb li {
+            transition: all .3s ease;
+        }
+        #main_gnb li:hover {
+            background-color: rgb(38, 152, 197);
+        }
+        #main_gnb li:active {
+            background-color: rgb(20, 95, 124);
+        }
+        
+        #main_gnb a {
+            display: block;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-left: 1px solid rgb(25, 88, 112);
+            border-right: 1px solid rgb(102, 164, 189);
+        }
+
+
+        /* CONTENTS : 콘텐츠 */
+        #wrap {
+            overflow: hidden;
+            background-color: rgb(65, 99, 112);
+        }
+        #wrap > #main_lnb {
+            float: left;
+            width: 200px;
+        }
+        #wrap > #main_lnb li {
+            transition: all .3s ease;
+        }
+        #wrap > #main_lnb li:hover {
+            background-color: rgb(92, 136, 153);
+        }
+        #wrap > #main_lnb li:active {
+            background-color: rgb(44, 67, 77);
+        }
+
+        #wrap > #content_wrap {
+            float: left;
+            width: 100%;
+            margin-right: -200px
+        }
+        #wrap > #content_wrap > #content {
+            padding-right: 200px;
+        }
+
+        /* LEFT MENU : 좌측메뉴 */
+        #main_lnb > ul > li > a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            border-top: 1px solid rgb(88, 133, 151);
+            border-bottom: 1px solid rgb(45, 76, 88);
+            color: #fff;
+            font-weight: bold;
+            padding-left: 15px;
+        }
+        
+        /* CONTENT : 본문 */
+        #content {
+            background-color: #fff;
+            border-left: 1px solid #000;
+        }
+        article {
+            padding: 20px;
+        }
+        article > h1 {
+            margin-bottom: 15px;
+            color: rgb(8, 58, 78);
+        }
+        article > p {
+            line-height: 130%;
+        }
+
+        /* FOOTER : 푸터 */
+        #main_footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(9, 45, 59);
+            color: #fff;
+            border-top: 1px solid #000;
+       }
+
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <h1>Fluid</h1>
+    </header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">MENU1</a></li>
+            <li><a href="#">MENU2</a></li>
+            <li><a href="#">MENU3</a></li>
+            <li><a href="#">MENU4</a></li>
+            <li><a href="#">MENU5</a></li>
+            <li><a href="#">MENU6</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">MENU1</a></li>
+            <li><a href="#">MENU2</a></li>
+        </ul>
+    </nav>
+    <div id="wrap">
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">Left Btn</a></li>
+                <li><a href="#">Left Btn</a></li>
+                <li><a href="#">Left Btn</a></li>
+                <li><a href="#">Left Btn</a></li>
+                <li><a href="#">Left Btn</a></li>
+            </ul>
+        </nav>
+        <div id="content_wrap">
+            <div id="content">
+                <article>
+                    <h1>제목</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil iste, atque at fugiat ab adipisci dolorum impedit doloribus ipsam! Accusamus quod commodi eos distinctio, atque obcaecati fuga incidunt qui? Labore?
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil iste, atque at fugiat ab adipisci dolorum impedit doloribus ipsam! Accusamus quod commodi eos distinctio, atque obcaecati fuga incidunt qui? Labore?
+                    </p>
+                </article>
+                <article>
+                    <h1>제목</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil iste, atque at fugiat ab adipisci dolorum impedit doloribus ipsam! Accusamus quod commodi eos distinctio, atque obcaecati fuga incidunt qui? Labore?
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil iste, atque at fugiat ab adipisci dolorum impedit doloribus ipsam! Accusamus quod commodi eos distinctio, atque obcaecati fuga incidunt qui? Labore?
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="main_footer">
+        <h3>Fluid Website</h3>
+        <address>수원시 장안구 영화동</address>
+    </footer>
+</body>
+</html>

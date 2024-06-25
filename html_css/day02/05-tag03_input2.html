@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input태그 활용2</title>
+    <style>
+        * { padding: 0; margin: 0;}
+        h2 { background-color: blanchedalmond; margin: 0 0 10px; font-size: 20px;}
+        #a { display: block; }
+        hr { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <!--
+        input태그의 type속성의 checkbox속성값 활용
+        정확하게 체크박스만 '정확하게'클릭해야 체크가 된다.
+    -->
+    <h2>input태그의 checkbox 사용 (lable사용 x)</h2>
+    <div>
+        <input type="checkbox" name="" id="fcheckbox_g" value="g">골프
+        <input type="checkbox" name="" id="fcheckbox_f" value="f">축구
+        <input type="checkbox" name="" id="fcheckbox_b" value="b">야구
+        <input type="checkbox" name="" id="fcheckbox_t" value="t">탁구
+    </div>
+    
+    <hr>
+    
+    <!--
+        input태그의 type속성의 checkbox속성값 활용
+        label태그를 사용하면 label속 내용을 클릭해도 체크박스에 표시가 된다.
+        label태그에 for속성안에 속성값은 연결할 input태그의 id값과 동일해야한다.
+    -->
+    <h2>input태그의 lable태그도 활용</h2>
+    <div>
+        <input type="checkbox" name="" id="fcheckbox_g" value="g">
+        <label for="fcheckbox_g">골프</label>
+        <input type="checkbox" name="" id="fcheckbox_f" value="f">
+        <label for="fcheckbox_f">축구</label>
+        <input type="checkbox" name="" id="fcheckbox_b" value="b">
+        <label for="fcheckbox_b">야구</label>
+        <input type="checkbox" name="" id="fcheckbox_t" value="t">
+        <label for="fcheckbox_t">탁구</label>
+    </div>
+    
+    <hr>
+    
+</body>
+</html>

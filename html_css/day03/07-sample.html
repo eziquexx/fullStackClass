@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소 form 태그</title>
+    <style>
+        hr { margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <!--
+        p.170~p.179
+    -->
+    <h1>폼 요소 form 태그</h1>
+    <h2>**form 이름 전화번호 전송 폼 사용방법</h2>
+    <h2>FORM 연락처</h2>
+    <form name="phone_form" id="phone_form" method="post" action="/phone.php">
+        <label for="fname">이름:</label><br>
+        <input type="text" id="fname" name="fname" value="" placeholder="이름을 입력하세요."><br><br>
+        <label for="fphone">전화:</label><br>
+        <input type="text" id="fname" name="fphone" value="" placeholder="전화번호를 입력해주세요."> <br><br>
+        <input type="submit" value="Submit" class="submitBtn">
+        <input type="reset" value="Reset" class="resetBtn">
+    </form>
+
+    <hr>
+
+    <h2>**form 아이디 비밀번호 전송 폼 사용방법</h2>
+    <h2>FORM USER 아이디와 비밀번호?</h2>
+    <form name="user_form1" id="user_form1" method="post" action="/phone.php">
+        <label for="userid">User name:</label><br>
+        <input type="text" id="userid" name="userid"><br><br>
+        <label for="userpw">Password:</label><br>
+        <input type="text" id="userpw" name="userpw"><br><br>
+        <input type="submit" value="Submit" class="submitBtn">
+        <input type="reset" value="Reset" class="resetBtn">
+    </form>
+
+    <hr>
+
+    <h2>**form 좋아하는 식사는 전송 폼 사용방법</h2>
+    <h2>FORM 좋아하는 식사는?</h2>
+    <form name="phone_form2" id="phone_form2" method="post" action="/phone.php">
+        <label for="fname2">이름:</label><br>
+        <input type="text" id="fname2" name="fname2" value="" placeholder="이름을 입력하세요."><br>
+        <label for="fphone2">전화:</label><br>
+        <input type="text" id="fphone2" name="fphone2" value="" placeholder="전화번호를 입력하세요."><br><br>
+        <label for="select_food2">취미:</label><br>
+        <select name="select_food2" id="select_food2">
+            <option value="" selected>좋아하는 식사는?</option>
+            <option value="아침">아침</option>
+            <option value="브런치">브런치</option>
+            <option value="점심">점심</option>
+            <option value="저녁">저녁</option>
+            <option value="야식">야식</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" class="submitBtn2">
+        <input type="reset" value="Reset" class="resetBtn2">
+    </form>
+
+    <hr>
+
+    <h2>**form 이름 전화번호 좋아하는 것, 성별, 전송 폼 사용방법</h2>
+    <h2>FORM 이름 전화번호 성별 좋아하는 것 라디오 버튼 체크박스</h2>
+    <form name="phone_form3" id="phone_form3" method="post" action="/phone.php">
+        <label for="fname3">이름:</label><br>
+        <input type="text" name="fname3" id="fname3" value="" placeholder="이름을 입력하세요."><br>
+        <label for="fphone3">전화:</label><br>
+        <input type="text" name="fphone3" id="fphone3" value="" placeholder="전화번호를 입력해주세요."><br><br>
+        
+        <h3>성별은?</h3>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">남성</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">여성</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="other">Other</label><br><br>
+
+        <h3>좋아하는 것은?</h3>
+        <input type="checkbox" name="vehicle1" id="vehicle1" value="Bike">
+        <label for="vehicle1">오토바이</label>
+        <input type="checkbox" name="vehicle2" id="vehicle2" value="Car">
+        <label for="vehicle2">자동차</label>
+        <input type="checkbox" name="vehicle3" id="vehicle3" value="Boat">
+        <label for="vehicle3">배</label>
+
+        <hr>
+
+    </form>
+
+
+
+
+
+</body>
+</html>

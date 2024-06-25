@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin & padding 스타일</title>
+    <style>
+        * {margin: 0;}
+        body {
+            font-size: 15px;
+            color: #555;
+            line-height: 160%;
+            background: #f9f9f5;
+        }
+        #wrap { margin: 50px 100px; }
+        #wrap #textBox { background: #fff; }
+        #wrap #textBox .gap { padding: 60px 80px; }
+        #wrap #textBox .gap h3 { margin: 10px 80px; }
+        #wrap #textBox .gap p { margin: 20px 80px; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="textBox">
+            <div class="gap">
+                <h3>Web Publisehr</h3>
+                <p class="text-indent1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quibusdam temporibus? Dolor aperiam asperiores cumque natus excepturi esse minima tenetur quos omnis. Dignissimos, voluptate optio? Itaque fuga minima consectetur sapiente!
+                </p>
+                <h3>Frontend</h3>
+                <p class="text-indent2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quibusdam temporibus? Dolor aperiam asperiores cumque natus excepturi esse minima tenetur quos omnis. Dignissimos, voluptate optio? Itaque fuga minima consectetur sapiente!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

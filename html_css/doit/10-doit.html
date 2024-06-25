@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func(){
+            var ele = document.getElementById('change');
+            ele.value = '호랑이';
+        }
+
+        function funca(){
+            var ele = document.getElementById('btn');
+            ele.value = '버튼 변경';
+        }
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .flex-container {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .flex-container > div {
+            position: relative;
+            background-color: #f1f1f1;
+            width: 50%;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        h3 {
+            display: block;
+            padding: 10px 0;
+        }
+        .input input {
+            display: block;
+            margin: 0 auto 10px;
+            height:20px;
+        }
+        .flex-container p {
+            font-size: 13px;
+        }
+        a { display: block; }
+        p {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 70px;
+            padding-top: 5px;
+        }
+        .input_top {
+            display: block;
+            width: 100%;
+            height: 75px;
+        }
+        hr { background-color: #999; height: 1px; }
+
+        #btn { 
+            width: 80px;
+            height: 30px;
+            background-color: antiquewhite;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>input태그 복습</h1>
+    <div class="flex-container">
+        <div class="input">
+            <h3>value와 placeholder</h3>
+            <div class="input_top">
+                <input type="text" value="번호를 입력해주세요.">
+                <input type="text" placeholder="번호를 입력해주세요.">
+            </div>
+            <hr>
+            <p>
+                value속성은 기본값을 줌.<br>
+                placeholder은 회색으로 글자 표시,<br>클릭하면 글자가 사라짐.
+            </p>
+        </div>
+        <div class="input">
+            <h3>버튼 클릭시 value값 주기</h3>
+            <div class="input_top">
+                <input type="text" id="change" placeholder="입력해주세요.">
+                <a href="javascript:func();">value값 주기</a>
+            </div>
+            <hr>
+            <p>
+              'value값 주기'를 클릭하면 javaScript 실행.<br>
+              '입력해주세요.'글자에 value값으로 호랑이가 들어간다.  
+            </p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="input">
+            <h3>버튼 클릭시 글자로 변경</h3>
+            <div class="input_top">
+                <input type="button" value="버튼" id="btn" onclick="javascript:funca();">
+            </div>
+            <hr>
+            <p>버튼을 클릭하면 '버튼 번경'이라고 글자가 변경된다.</p>
+        </div>
+        <div class="input">
+            <h3>checkbox 사용(label x)</h3>
+            <div class="input_top">
+                <input type="checkbox" id="checkbox_g" value="g">골프
+                <input type="checkbox" id="checkbox_f" vlaue="f">축구
+                <input type="checkbox" id="checkbox_b" value="b">야구
+            </div>
+            <hr>
+            <p></p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+        <div class="input">
+            <h3></h3>
+            <div class="input_top">
+
+            </div>
+            <hr>
+            <p></p>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+    </div>
+    <!--
+    <div class="wrap wrap1">
+        <div class="wrap1_contents contents wrap1_1"></div>
+        <div class="wrap1_contents contents wrap1_2"></div>
+        <div class="wrap1_contents contents wrap1_3"></div>
+        <div class="wrap1_contents contents wrap1_4"></div>
+        <div class="wrap1_contents contents wrap1_5"></div>
+    </div>
+    <div class="wrap wrap2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="wrap wrap3">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="wrap wrap4">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="wrap wrap5">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>-->
+</body>
+</html>

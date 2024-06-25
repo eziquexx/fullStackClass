@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border CSS</title>
+    <style>
+        h2 { text-align: center; }
+        hr { margin: 30px 0; }
+        .box {
+            width: 500px;
+            height: 50px;
+            margin: 10px auto;
+            border: 7px solid #666;
+            text-align: center;
+            line-height: 50px;
+        }
+        .box:hover {
+            border-color: #c99;
+        }
+
+        .box-0 { border: 7px dotted #c6c; }
+        .box-1 { border: 7px dashed #c66; }
+        .box-2 { border: 7px solid #c6c; }
+        .box-3 { border: 7px double #66c; }
+        .box-4 { border: 7px groove #6c6; }
+        .box-5 { border: 7px ridge #cc6; }
+        .box-6 { border: 7px inset #66c; }
+        .box-7 { border: 7px outset #c6c; }
+        .box-8 { 
+            border: 7px solid #000;
+            border-width: 7px;
+            border-style: solid dashed double groove;
+        }
+        .box-9 {
+            border: 7px solid #66c;
+            border-style: dotted solid double dashed;
+        }
+        .box-10 {
+            border: 7px solid #c66;
+            border-style: dotted solid double;
+        }
+        .box-11 {
+            border: 7px solid #6c6;
+            border-style: solid dotted;
+        }
+        .box-12 { border: 7px initial #6cc; }
+        .box-13 { border: 7px none #cd6; }
+        .box-14 { border: 7px hidden #c6d; }
+
+    </style>
+</head>
+<body>
+    <h2>** 테두리 속성 지정방식/ :hover 사용</h2>
+    <div class="box"></div>
+    <hr>
+    <h2>** 테두리의 스타일 종류</h2>
+    <div class="box box-0">dotted</div>
+    <div class="box box-1">dashed</div>
+    <div class="box box-2">solid</div>
+    <div class="box box-3">groove</div>
+    <div class="box box-4">ridge</div>
+    <div class="box box-5">inset</div>
+    <div class="box box-6">outset</div>
+    <div class="box box-7">outset</div>
+    <div class="box box-8">solid dashed double groove</div>
+    <div class="box box-9">dotted solid double dashed</div>
+    <div class="box box-10">dotted solid double</div>
+    <div class="box box-11">solid dotted</div>
+    <div class="box box-12">initial</div>
+    <div class="box box-13">none</div>
+    <div class="box box-14">hidden</div>
+</body>
+</html>

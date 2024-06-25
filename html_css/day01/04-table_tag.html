@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        thead {
+            background-color: #F2F2F2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>학생</th>
+            <th colspan="2">국어 & 영어</th>
+            <th>수학</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>철수</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td rowspan="2">영희 & 만수</td>
+                <td colspan="2" rowspan="2">90</td>
+                
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>80</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table>
+        <thead>
+            <th>공급자</th>
+            <th colspan="2">상호</th>
+            <th colspan="2">연세IT</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>사업자</td>
+                <td colspan="3">123-45-678</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>주소</td>
+                <td colspan="3">수원 장안구</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>업종</td>
+                <td>교육</td>
+                <td>엄태</td>
+                <td>학원</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <td rowspan="4" style="width:60px; writing-mode: vertical-rl;">공급자</td>
+            <td colspan="2">상호</td>
+            <td colspan="2">연세IT</td>
+        </tr>
+        <tr>
+            <td>사업자</td>
+            <td colspan="3">123-45-678</td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td colspan="3">수원 장안구</td>
+        </tr>
+        <tr>
+            <td>업종</td>
+            <td>교육</td>
+            <td>엄태</td>
+            <td>학원</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>강사님이 한 거</h3>
+    <table>
+        <tr>
+            <td rowspan="4">공급자</td>
+            <td colspan="2">상호</td>
+            <td colspan="3">연세IT</td>
+        </tr>
+        <tr>
+            <td >사업자</td>
+            <td colspan="4">123-45-678</td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td colspan="4">수원시 장안구</td>
+        </tr>
+        <tr>
+            <td>업종</td>
+            <td colspan="2">교육</td>
+            <td>업태</td>
+            <td>학교</td>
+        </tr>
+    </table>
+</body>
+</html>

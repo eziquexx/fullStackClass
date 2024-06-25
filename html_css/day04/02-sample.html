@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자2</title>
+    <style>
+        div#sp1 .frontend { background-color: #99c; }
+        div#sp1 #webPublisher { background-color: #c9c; }
+        div#sp1 p { background-color: #9cc; }
+        div#sp1 p#webPublisher { background-color: rgb(33, 187, 187); }
+        div#sp1 h1, div#sp1 h2 { background-color: blue; }
+
+        div#sp2 > section > p { background-color: blue; }
+        div#sp2 h3+p { background-color: orange; }
+
+        div#sp3 #subject ~ p { background-color: aquamarine; }
+    </style>
+</head>
+<body>
+    <!-- 
+        선택자 Selector
+        class : 클래스 이름 .frontend 선택, #webPublisher 선택, p요소 선택
+        p.202~p.206
+    -->
+    <div id ="sp1">
+        <h1 id="subject">웹 문서 웹표준 웹접근성 크로스브라우징 반응형</h1>
+        <h2 class="web-designer">웹 디자이너</h2>
+        <h3 id="webPublisher">웹 퍼블리셔</h3>
+        <p id="webPublisher">웹 퍼블리셔</p>
+        <h4 class="frontend">프론트 앤드</h4>
+        <div class="backend">백 앤드</div>
+        <p id="fullstack">풀스택</p>
+    </div>
+    <hr>
+    <!-- 
+        선택자 Selector
+        class : div p 선택, div > p 선택, div+p 선택
+        p.207~p.209
+    -->
+    <div id ="sp2">
+        <section>
+            <h1 id="subject">웹 문서 웹표준 웹접근성 크로스브라우징 반응형</h1>
+            <h2 class="web-designer">웹 디자이너</h2>
+            <h3 id="webPublisher">웹 퍼블리셔1</h3>
+            <p id="webPublisher">웹 퍼블리셔2</p>
+            <h4 class="frontend">프론트 앤드</h4>
+            <div class="backend">백 앤드</div>
+            <p id="fullstack">풀스택</p>
+        </section>
+    </div>
+    <hr>
+    <!-- 
+        선택자 Selector
+        #section1 ~ p => #section1 ~ p 다음 형제 요소 중 모든 p 요소들을 선택
+        p.210
+    -->
+    <div id ="sp3">
+        <section>
+            <h1 id="subject">웹 문서 웹표준 웹접근성 크로스브라우징 반응형</h1>
+            <h2 class="web-designer">웹 디자이너</h2>
+            <h3 id="webPublisher">웹 퍼블리셔1</h3>
+            <p id="webPublisher">웹 퍼블리셔2</p>
+            <h4 class="frontend">프론트 앤드</h4>
+            <div class="backend">백 앤드</div>
+            <p id="fullstack">풀스택</p>
+        </section>
+    </div>
+</body>
+</html>

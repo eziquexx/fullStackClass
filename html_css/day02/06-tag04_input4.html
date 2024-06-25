@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input태그 활용4</title>
+    <style>
+        * { padding: 0; margin: 0;}
+        h2 { background-color: blanchedalmond; margin: 0 0 10px; font-size: 20px; padding-left: 10px;}
+        #a { display: block; }
+        hr { margin: 20px 0; } 
+    </style>
+</head>
+<body>
+    <!--
+        input태그에 type속성의 date속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - data속성값</h2>
+    <div><input type="date" name="" id="" value="2024-06-11"></div>
+    
+    <hr>
+    
+    <!--
+        input태그에 type속성의 datetime-local속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - datetime-local속성값</h2>
+    <div><input type="datetime-local" name="" id=""></div>
+    
+    <hr>
+    
+    <!--
+        input태그에 type속성의 datetime-local속성값 주었을 때
+        value속성에 속성값을 임의로 2024-06-11 13:00:00을 주었을 때
+        -->
+    <h2>input태그 - type속성 - datetime-local속성값, value값 임의로 주기</h2>
+    <div><input type="datetime-local" name="" id="" value="2024-06-11 13:00:00"></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 file속성값 주었을 때
+        accept속성을 사용하여 임의로 지정한 파일만 선택할 수 있따.
+    -->
+    <h2>input태그 - type속성 - file속성값</h2>
+    <div><input type="file" name="" id="" accept=".txt, .jpeg, .jpg, .pdf"></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 hidden속성값 주었을 때
+        단어 그대로 hidden된다.
+        사용자에게는 보이지 않는 숨겨진 입력 필드를 생성한다.
+        폼 제출 시 사용자가 변경해서는 안 되는 데이터를 함께 보낼 때 유용하게 사용된다.
+        주로 백 엔드에서 사용된다.
+    -->
+    <h2>input태그 - type속성 - hidden속성값 (보이지 않음)</h2>
+    <div><input type="hidden" name=""></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 image속성값 주었을 때
+        마우스 커서를 네이버 로고 이미지에 올려다 놓으면 클릭할 수 있는 손가락 표시로 바뀐다.
+        반면 img태그만해서 네이버 로고 이미지를 넣으면 마우스 커서가 안 바뀐다.
+    -->
+    <h2>input태그 - type속성 - image속성값과 img태그 차이</h2>
+    <div><input type="image" src="./images/naver.png" alt=""></div>
+    <div><img src="./images/naver.png" alt=""></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 month속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - month속성값</h2>
+    <div><input type="month" name="" id=""></div>
+    
+    <hr>
+
+    <!--
+        input태그에 type속성의 number속성값 주었을 때
+        주의! number에는 숫자만 사용해야한다. 문자가 입력되면 오류가 새김.
+    -->
+    <h2>input태그 - type속성 - number속성값</h2>
+    <div><input type="number" name="" id=""></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 password속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - password속성값</h2>
+    <div><input type="password" name="" id=""></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속서의 radio속성값 주었을 때
+        임의로 체크표시를 해놓는 건 input태그에 cheked를 주면 된다.
+    -->
+    <h2>input태그 - type속성 - radio속성값</h2>
+    <div>
+        <input type="radio" name="" id="" checked>남
+        <input type="radio" name="" id="">녀
+    </div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 range속성값 주었을 때
+        min속성은 최소값, max속성은 최대값, value는 기본값 임의 지정.
+    -->
+    <h2>input태그 - type속성 - range속성값</h2>
+    <div><input type="range" name="" id=""></div>
+    <div><input type="range" name="" id="" min="0" max="10" value="3"></div>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 reset속성값 주었을 때
+        reset버튼을 클릭하면 값이 초기화 된다.
+        단 form태그 안에 input태그가 들어가 있어야한다.
+    -->
+    <h2>input태그 - type속성 - reset속성값</h2>
+    <form action="#" method="get" taret="_self">
+        <div><input type="range" name="" id="" min="0" max="10" value="3"></div>
+        <div><input type="reset" value="초기화"></div>
+    </form>
+
+    <hr>
+
+    <!--
+        input태그에 type속성의 search속성값 주었을 때
+        검색어를 입력할 수 있는 텍스트 필드를 생성.
+        검색 필드에는 반드시 name 속성을 설정해야 하며, 서버로 전송된다.
+    -->
+    <h2>input태그 - type속성 - search속성값</h2>
+    <div><input type="search" name="" id=""></div>
+    
+    <hr>
+    
+    <!--
+        input태그에 type속성의 submit속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - submit속성값</h2>
+    <div><input type="submit" value="전송"></div>
+    
+    <hr>
+    
+    
+    <!--
+        input태그에 type속성의 tel속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - tel속성값</h2>
+    <div><input type="tel" name="" id=""></div>
+    
+    <hr>
+        
+    <!--
+        input태그에 type속성의 time속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - time속성값</h2>
+    <div><input type="time" name="" id=""></div>
+    
+    <hr>
+
+    
+    <!--
+        input태그에 type속성의 url속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - url속성값</h2>
+    <div><input type="url" name="" id="" value="www.naver.com"></div>
+    
+    <hr>
+    
+    <!--
+        input태그에 type속성의 week속성값 주었을 때
+    -->
+    <h2>input태그 - type속성 - week속성값</h2>
+    <div><input type="week" name="" id="" value="www.naver.com"></div>
+
+
+</body>
+</html>

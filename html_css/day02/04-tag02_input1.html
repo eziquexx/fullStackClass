@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 태그 활용1</title>
+    <script>
+        // id kkk의 value값 호랑이 주기.
+        function func(){
+            var ele = document.getElementById('kkk');
+            ele.value = '호랑이';
+        }
+
+        //id btn의 value값 호랑이 주기.
+        function funca(){
+            var ele = document.getElementById('btn');
+            ele.value = '호랑이';
+        }
+    </script>
+    <style>
+        * { padding: 0; margin: 0;}
+        h2 { background-color: blanchedalmond; margin: 0 0 10px; font-size: 20px;}
+        #a { display: block; }
+        hr { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <!--
+        <form action="담당서버 주소" target="윈도우" method="post get"
+        <form action ="register.php"></form>
+        => register.php로 요청
+    -->
+
+    <!--
+        input태그의 value 속성과 placeholder 속성 사용.
+        value는 글씨가 사라지지 않음.
+        placeholder는 회색의 글자색이고 클릭하면 글자가 사라짐.
+    -->
+    <h2 id="aa">value와 placeholder</h2>
+    <div><input type="text" name="" id="" value="번호를 입력해주세요."></div>
+    <div><input type="text" name="" id="" placeholder="아이디를 입력해주세요."></div>
+
+    <hr>
+    
+    <!--
+        a링크를 클릭하면 a태그에 연결한 javascript를 호출한다.
+        javascript에서 id가 kkk인 태그를 찾아서 그 태그의 value값을 호랑이로 변경한다.
+        결과적으로 input태그에 '호랑이'라는 글자가 작성된다.
+    -->
+    <h2>javaScript를 활용하여 버튼 클릭시 input태그에 value값 주기</h2>
+    <div>
+        <input type="text" name="" id="kkk" placeholder="입력해주세요.">
+    </div>
+    <div><a href="javascript:func();">내용 바꾸기</a></div>
+
+    <hr>
+
+    <!--
+        button태그의 value속성에 속성값을 주기.
+        value속성에 속성값을 안 넣으면(문자) 빈 버튼만 보인다.
+    -->
+    <h2>버튼 클릭시 버튼 -> 호랑이 글자로 변경</h2>
+    <div><input type="button" id="btn" value="버튼" onclick="javascript:funca();"></div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+.row { overflow: hidden; }
+.span { float: left; }
+.span-1 {width: 80px; background-color: aqua;}
+.span-2 {width: 160px; background-color: aquamarine;}
+.span-3 {width: 240px; background-color: antiquewhite;}
+.span-4 {width: 320px; background-color: brown;}
+.span-5 {width: 400px; background-color: rebeccapurple;}
+.span-6 {width: 480px; background-color: tomato;}
+.span-7 {width: 560px; background-color: steelblue;}
+.span-8 {width: 640px; background-color: skyblue;}
+.span-9 {width: 720px; background-color: slategray;}
+.span-10 {width: 800px; background-color: seagreen;}
+.span-11 {width: 880px; background-color: royalblue;}
+.span-12 {width: 960px; background-color: palegreen;}

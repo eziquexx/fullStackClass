@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color 예제</title>
+    <style>
+        hr { height: 2px; background-color: #333; margin: 40px 0; }
+
+        div#ex1 .wrap { font-size: 20px; color: #333; }
+        div#ex1 h3 { font-size: 30px; color: #258; background-color: #f9f9f3; }
+        div#ex1 .cyan-color { color: #0ff; }
+        div#ex1 .magenta-color { color: #f0f; }
+        div#ex1 .pink-color { color: #e69; }
+        div#ex1 .red-color { color: #f00; }
+        div#ex1 .green-color { color: rgb(0, 255, 0); }
+        div#ex1 .blue-color { color: rgb(0, 0, 255); }
+
+        div#ex2 .bg-img {
+            padding: 30px;
+            background: url(../img/html5.jpg);
+        }
+        div#ex2 .bg-img p {
+            padding: 30px;
+            font-size: 60px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        p.247, p.248
+    -->
+    <h1>예제1</h1>
+    <div id="ex1">
+        <h3>
+            color : 텍스트 컬러 속성 값 16진수
+            <span class="pink-color">HEXA</span>, 10진수
+            <span class="red-color">R</span>
+            <span class="green-color">G</span>
+            <span class="blue-color">B</span>()설정
+        </h3>
+
+        <ul class="wrap">
+            <li>
+                텍스트 <span class="cyan-color">컬러</span> 색상
+                <span class="magenta-color">설정 하기</span>
+            </li>
+            <li>
+                16진수 컬러 표혆방법은
+                #<span class="red-color">FF</span>
+                <span class="green-color">FF</span>
+                <span class="blue-color">FF</span>
+                이렇게 표현 합니다.
+            </li>
+            <li>각각 2개씩 자리를 최대값 FF로 표현 합니다.</li>
+            <li>컬러는 RGB로 빛의 3원색을 사용합니다.</li>
+            <li>색상 표현은 <span class="red-color">Red 256</span></li>
+            <li>색상 표현은 <span class="green-color">Green 256</span></li>
+            <li>색상 표현은 <span class="blue-color">Blue 256</span></li>
+        </ul>
+    </div>
+    
+    <hr>
+
+    <!-- 
+        p.248, p.249
+    -->
+    <h1>예제2</h1>
+    <div id="ex2">
+        <h3>RGBA(255, 255, 255, 1)의 알파값 이용 배경 투명 색상 설정하기</h3>
+        <div class="bg-img">
+            <p><strong>투명 배경색상 지정하기</strong></p>
+        </div>
+    </div>
+</body>
+</html>

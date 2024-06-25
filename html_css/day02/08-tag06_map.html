@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 활용 6 - map</title>
+    <style>
+        h2 { background-color: blanchedalmond; margin: 0 0 10px; font-size: 20px; padding-left: 10px;}
+        hr { margin: 20px 0; } 
+    </style>
+</head>
+<body>
+
+    <!--
+        map태그와 img태그 사용.
+        img태그에 usemap에 아이디값을 주고, map태그에 name속성에 속성값을 img태그에 usemap에 준 아이디값과 동일하게 작성한다.
+
+        area태그에 shape속성은 모양. 속성값으로는 rect 사각형, circle은 동그라미, poly는 다각형.
+        coords는 좌표값
+        
+        이미지에 좌측 상단과 우측 상단에 마우스 커서를 올려다놓으면 손가락 모양으로 바뀌고 클릭하면 작성한 링크로 이동된다.
+    -->
+    <h2>map 태그</h2>
+    <img src="./images/lastdinner.png" alt="" width="300" usemap="#testmap">
+    <map name="testmap">
+        <area shape="rect" coords="0, 0, 20, 20" href="http://naver.com" alt="">
+        <area shape="rect" coords="280, 0, 300, 20" href="http://naver.com" alt="">
+    </map>
+</body>
+</html>

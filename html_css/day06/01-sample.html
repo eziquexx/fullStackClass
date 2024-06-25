@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition - 1</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transition-delay: 0.3s; /*0.3초뒤에 실행*/
+            transition-duration: 3s; /*3초간 실행*/
+            transition-timing-function: ease-in-out;
+        }
+        .box:hover {
+            width: 200px;
+            height: 300px;
+        }
+        .box:active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing 스타일</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 50px;
+            border: 7px solid #c66;
+        }
+        .box2 {
+            width: 500px;
+            height: 50px;
+            border: 7px solid #c66;
+            box-sizing: border-box;
+        }
+        .box3 {
+            width: 500px;
+            height: 50px;
+            border: 7px solid #c66;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- p.312 -->
+    <h2>테두리 지정 기본 박스 블록 구성</h2>
+    <div class="box box1">box1</div>
+    <br>
+    <h2>테두리 포함된 박스 블록 구성 -border-box</h2>
+    <div class="box box2">box2</div>
+    <br>
+    <h2>테두리 퐇마 안 된 박스 블록 구성 -border-box</h2>
+    <div class="box box3">box3</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web font</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap');
+
+        /* 
+        #text-wrap { width: 90%; margin: 0 auto; font-size: 14px; color: #444; }
+        .text-font1 { font-family: "verdana", "sans-serif"; }
+        .text-font2 { font-family: "sans-serif", "verdana"; }
+        .text-font3 { font-family: "Georgia", "verdana"; }
+        .text-font4 { font-family: "굴림", "돋움"; }
+        */
+        /* @font-face {
+            font-family: 'NanumGothic';
+            src: url('./fonts/NanumGothic.eot');
+        } */
+        
+        h2 { text-align: center; font-family: "Nanum Myeongjo", serif; }
+        .text-font1 { font-family: "verdana", "sans-serif"; }
+        .text-font2 {
+            font-family: "Nanum Gothic", sans-serif;
+            color: #777;
+        }
+        .text-font4 { font-family: "Nanum Pen Script", cursive; font-size: 22px; }
+
+        .fitalic { font-style: italic; }
+        .funderline { text-decoration: underline; }
+        .fline-through { text-decoration: line-through; }
+    </style>
+</head>
+<body>
+    <h2>font-family(글꼴)</h2>
+    <div id="text-wrap">
+        <p class="text-font1 fitalic funderline fline-through">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquid libero consequuntur voluptatem incidunt velit pariatur, eveniet modi laborum optio esse aut, in ex, commodi accusantium natus. Dolore, facere dolorum?
+        </p>
+        <p class="text-font2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi inventore reprehenderit error odit quae non ea, accusantium maxime harum velit optio saepe nisi illum eaque magnam? Repellat, tempore. Aperiam, quaerat!
+        </p>
+        <p class="text-font3 funderline">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic iste incidunt aliquam sit, a corrupti maiores nemo repellat distinctio cupiditate ratione ipsam! Molestias voluptatibus non sequi, nemo numquam asperiores deleniti.
+        </p>
+        <p class="text-font4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, impedit itaque. Asperiores beatae deleniti, fugit quam expedita dolores totam est assumenda nesciunt, praesentium veniam! Magnam perspiciatis numquam amet! Dolores, commodi!
+        </p>
+    </div>
+</body>
+</html>
