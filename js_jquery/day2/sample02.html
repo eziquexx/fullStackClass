@@ -42,19 +42,95 @@
         //     log('불합격');
         // }
 
-        let score = 75;
-        if(score > 60){
-            log("합격");
-        } else if (score >= 80 && score < 90){
-            log('B학점');
-        } else if (70 <= score && score < 80){
-            log('C학점');
-        } else if (70 <= score && score < 70){
-            log('D학점');
-        } else (score < 60){
-            log('F학점');
+        // let score = 75;
+        // if(score >= 90){
+        //     log("A학점");
+        // } else {
+        //      if(score >= 90){
+        //         log('B학점');
+        //      } else {
+        //         if(score >= 70){
+        //             log('C학점');
+        //         } else {
+        //             if(score >= 60){
+        //                 log('D학점');
+        //             } else {
+        //                 log('F학점')
+        //             }
+        //         }
+        //      }
+        // }
+        // log('종료');
+
+        
+        // let score = 75;
+        // if(score >= 90){
+        //     log("합격");
+        // } else if (score >= 80){
+        //     log('B학점');
+        // } else if (score >= 70){
+        //     log('C학점');
+        // } else if (core >= 60){
+        //     log('D학점');
+        // } else {
+        //     log('F학점');
+        // }
+        // log('종료');
+
+        
+        // let number = prompt('숫자를 입력해주세요.');
+        
+        // if((number % 3) === 0){
+        //     log('박수');
+        // } else {
+        //     log('박수x');
+        // }
+
+        // 철수 1, 5, 9, 13, 17 4씩 증가
+        // 영희 2, 6, 10, 14, 18 4씩 증가
+        // 민수 3, 7, 11, 15, 19 4씩 증가
+        // 숙희 4, 8, 12, 16, 20 4씩 증가
+
+        // 369, 철수 영희 민수 숙희
+        // 1234번째 박수를 치는 사람은
+
+
+        // let score = 95;
+        // switch(parseInt(score / 10)){
+        //     case 10:
+        //     case 9:
+        //         log('A학점');
+        //         break;
+        //     case 8:
+        //         log('B학점');
+        //         break;
+        //     case 7:
+        //         log('C학점');
+        //         break;
+        //     case 6:
+        //         log('D학점');
+        //         break;
+        //     case 6:
+        //         log('D학점');
+        //         break;
+        //     default:
+        //         log('F학점');
+        //         break;
+        // }
+
+        let num = prompt('몇번째 박수?');
+        if((num % 4) === 1){
+            log('철수');
+        } else if((num % 4) === 2){
+            log('영희');
+        } else if((num % 4) === 3){
+            log('민수');
+        } else if((num % 4) === 0){
+            log('숙희');
+        } else {
+            log('ㅎㅎ');
         }
-        log('종료');
+
     </script>
 </body>
 </html>
