@@ -119,13 +119,14 @@
         // }
 
         let num = prompt('몇번째 박수?');
-        if((num % 4) === 1){
+        let num2 = num * 4
+        if((num2 % 4) === 1){
             log('철수');
-        } else if((num % 4) === 2){
+        } else if((num2 % 4) === 2){
             log('영희');
-        } else if((num % 4) === 3){
+        } else if((num2 % 4) === 3){
             log('민수');
-        } else if((num % 4) === 0){
+        } else if((num2 % 4) === 0){
             log('숙희');
         } else {
             log('ㅎㅎ');
