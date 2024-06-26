@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // for(let i = 1; i < 3; i++){
+        //     log(i);
+        // }
+        // log('종료');
+
+        // let j = 0;
+        // for(let i = 1; i < 10; i++){
+        //     j += i;
+        //     console.log(j);
+        //     console.log(i+'번째 더하기'+'===========');
+        // }
+        // console.log(j);
+   
+        // 문제
+        // 100만원을 은행에 넣어다.
+        // 복리 월 이자는 1%
+        // 12개월 뒤 얼마가 되어을까?
+
+        // i = 1개월; i <= 12개월; i++
+        // 1개월 이자 값은 100 * 0.01
+        // 12개월 * 이자값
+
+        // let money = 1000000; //100만원
+        // for(let i = 1; i <= 12; i++){
+        //     console.log(money);
+        //     console.log('==========');
+        //     money *= 1.01;
+            
+        // }
+        // console.log(money);
+
+        // for(let i = 2; i <= 9; i++){
+        //     log("2 *", i, "=", 2*i);
+        // }
+        
+        // for(let dan = 2; dan <= 4; dan++){
+        //     for(let n = 1; n <= 9; n++){
+        //         console.log(dan, "*", n, "=", dan *n);
+        //     }
+        //     console.log('==================');
+        // }
+
+        // for(let line = 0; line < 5; line++ ){
+        //     let strStar = "";
+        //     for(let star = 0; star <= line; star++){
+        //         strStar += "*"
+        //     }
+        //     console.log(strStar);
+        // }
+
+        // for(let i = 5; i >= 1; i--){
+        //     let star = '';
+        //     for(let j = 1; j <= i; j++){
+                
+        //         // 별 5개 출력, 4개, 3개, 2개, 1개
+        //         star += '*';
+                
+        //     }
+        //     log(star);
+        // }
+
+        // for(let a = 5; a >= 1; a--){
+        //    // 처음 공백 4개와 * 1개 출력.
+        //    // 두번째 공백 3개와 * 2개 출력.
+        //    // a true,
+        //    star2 = '';
+        //    block = '';
+        // //    star3 = star2 + block;
+
+        //     for(let b = 1; b < a ; b++){
+        //         block += '\u00A0'; //공백    
+        //         //공백 4개 + 별 1개
+        //     } 
+        //     for(let c = 1; c <= a; c++){
+        //         star2 += '*';
+        //     }
+            
+        //     star3 = block + star2;
+        //    log(star3);
+        // }
+
+        
+        // for(let a = 5; a >= 0; a--){
+        //    // 처음 공백 4개와 * 1개 출력.
+        //    // 두번째 공백 3개와 * 2개 출력.
+        //    star2 = '';
+        //    block = '';
+           
+        //     for(let b = 1; b < a ; b++){
+        //         block += '\u00A0'; //공백    
+        //         //공백 4개 + 별 1개
+        //     } 
+        //     for(let c = 5; c <= a; c--){
+        //         star2 += '*';
+        //     }
+            
+        //     star3 = (block + star2);
+        //    console.log(star3);
+        // }
+
+        // for(let line = 0; line<5;line++){
+        //     let strStar = "";
+        //     for(blank=4; blank>line;blank--){
+        //         strStar+=" ";
+        //     }
+        //     for(let star = 0; star <= line  ; star++){
+        //         strStar += "*";
+        //     }
+        //     log(strStar);
+        // }
+
+        // for(let a = 0; a < 5; a++){
+        //     star = '';
+        //     block = '';
+
+        //     for(let b = 4; b > a; b--){
+        //         block += '\u00A0';
+        //     }
+        //     for(let c = 0; c <= a; c++){
+        //         star += '*';
+        //     }
+        //     result = block + star;
+        //     log(result);
+        // }
+
+        
+        // let num = 1;
+        // let sum = 0;
+        // while(num <= 10){
+        //     sum += num;
+        //     num++;
+        // }
+        // log(sum);
+
+
+        // while 문으로
+        // 문제
+        // 100만원을 은행에 넣어다.
+        // 복리 월 이자는 1%
+        // 12개월 뒤 얼마가 되어을까?
+
+        // let cal = 1;
+        // let money1 = 1000000;
+        // // let result = 0;
+        // while(cal <= 12){
+        //     // 100만원 이자 1% *12
+        //     // result += (money1 * 0.01);
+        //     money1 *= 1.01;
+            
+        //     cal++;
+        // }
+        // log(money1);
+        // log('===========');
+
+
+        // let money = 1000000;
+        // let month = 1;
+        // while(month <= 12){
+        //     log(money);
+        //     money *= 1.01;
+        //     month++;
+        // }
+        // log(money);
+
+
+        // 짝수만 출력1
+        // for(let i = 2; i <= 10; i += 2){
+        //     log(i);
+        // }
+
+
+        // 짝수만 출력2
+        // for(let i = 1; i <= 10; i++){
+        //     if(i % 2 === 1){
+        //         continue;
+        //     }
+        //     log(i);
+        // }
+
+        // 홀수만 출력1
+        // for(let i = 1; i <= 10; i++){
+        //     if(i % 3 === 0){
+        //         continue;
+        //     }
+        //     log(i);
+        // }
+
+        // 홀수만 출력2
+        // for(let i = 1; i <= 10; i++){
+        //     if(i % 3 != 0){
+        //         log(i);
+        //     }
+        // }
+
+        // 구구단 for문 사용.
+        // for(let dan = 2; dan <= 9; dan++){
+        //     for(let n = 1; n <= 9; n++){
+        //         log(dan, "*", n, "=", dan*n);
+        //     }
+        // }
+
+        // 구구단 for문 + if문 사용 + and연산자
+        // let dan = 2;
+        // for(let n = 2; n <= 9 && dan <= 9; n++){
+        //     log(dan, "*", n, "=", dan*n);
+        //     if(n >= 9){
+        //         dan++;
+        //         n = 2;
+        //     }
+        // }
+
+        // 구구단 다른 방식
+        // for(let i = 0; i < 81; i++){
+        //     let dan = parseInt(i/9) + 1;
+        //     let n = i % 9 + 1;
+        //     log(dan, "*", n, "=", dan * n);
+        // }
+
+        /**********************************************/
+        // 임의 세자리 숫자를 입력받기.
+        // 각각 자리의 숫자를 출력.
+        // 출력한 값의 합을 출력.
+        
+        let num = prompt('값 입력');
+        // let num = 234;
+        let numA = parseInt((num / 100) % 10);
+        let numB = parseInt((num / 10) % 10);
+        let numC = parseInt(num % 10);
+        // log(parseInt((num / 100) % 10));
+        // log(parseInt((num / 10) % 10));
+        // log(parseInt(num % 10));
+
+        let result = numA + numB + numC;
+        log('세자리 숫자 합한 값은 ' + result);
+        log('첫번째 자리는 ' + numA + ', ' + '두번째 자리는 ' + numB + ', ' + '세번째 자리는 ' + numC);
+
+
+    </script>
+</body>
+</html>
