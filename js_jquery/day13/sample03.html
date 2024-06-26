@@ -240,19 +240,278 @@
         // 각각 자리의 숫자를 출력.
         // 출력한 값의 합을 출력.
         
-        let num = prompt('값 입력');
-        // let num = 234;
-        let numA = parseInt((num / 100) % 10);
-        let numB = parseInt((num / 10) % 10);
-        let numC = parseInt(num % 10);
-        // log(parseInt((num / 100) % 10));
-        // log(parseInt((num / 10) % 10));
-        // log(parseInt(num % 10));
+        // let num = prompt('값 입력');
+        // // let num = 234;
+        // let numA = parseInt((num / 100) % 10);
+        // let numB = parseInt((num / 10) % 10);
+        // let numC = parseInt(num % 10);
+        // // log(parseInt((num / 100) % 10));
+        // // log(parseInt((num / 10) % 10));
+        // // log(parseInt(num % 10));
 
-        let result = numA + numB + numC;
-        log('세자리 숫자 합한 값은 ' + result);
-        log('첫번째 자리는 ' + numA + ', ' + '두번째 자리는 ' + numB + ', ' + '세번째 자리는 ' + numC);
+        // let result = numA + numB + numC;
+        // log('세자리 숫자 합한 값은 ' + result);
+        // log('첫번째 자리는 ' + numA + ', ' + '두번째 자리는 ' + numB + ', ' + '세번째 자리는 ' + numC);
 
+
+        // 강사님
+        // let num = 345
+
+        // n001 = parseInt(num / 1) % 10;
+        // n010 = parseInt(num / 10) % 10;
+        // n100 = parseInt(num / 100) % 10;
+
+        // // let i = 0;
+        // numTempo = num;
+        // sum = num % 10; //마지막 값 5
+        // while(true){
+        //     let divNum = numTempo = parseInt(numTempo / 10); //첫번째, 두번째 값 34
+        //     sum += (divNum % 10); // sum = 세번째 값 5 + 두번째 값 4 
+        //     if(divNum < 10){
+        //         break;
+        //     }
+        //     //i값 1씩 증가
+        //     // i++;
+        // }
+        // log(sum);
+        
+        
+        // let num = 123;
+
+        // numTempo = num;
+        // sum = num % 10;
+        // while(true){
+        //     num = parseInt(num / 10); 
+        //     sum += (num % 10); 
+
+        //     if(num < 10){
+        //         break;
+        //     }
+        // }
+        // log(sum);
+
+
+
+        // n001 = parseInt(num / 1) % 10;
+        // n010 = parseInt(num / 10) % 10;
+        // n100 = parseInt(num / 100) % 10;
+        // let num = 123;
+
+        // sum = num % 10; // 마지막 값 3
+        // while(true){
+        //     num = parseInt(num / 10); // num에 12값 
+        //     sum += (num % 10); // 원래 담겨있던 마지막 값 3 + 나머지값 2 (두번째);
+            
+        //     if(num < 10){ // num이 10이상 이면 break;
+        //         break;
+        //     }
+        // }
+        // log(sum);
+
+
+        // 3, 6, 9 가 총 몇개 있는지 찾기.
+        // let i = 123456789;
+        // num = i * 10;
+        // let count = 0;
+
+        // while(true){
+        //     num = parseInt(num / 10);
+
+        //     if((num % 10) % 3 == 0){
+        //         count++;
+        //     }
+        //     if(num < 10){
+        //         break;
+        //     }
+        // }
+        // log(count);
+
+
+        // // 입력받은 값
+        // num = 123;
+        // // 입력받은 값 자리수 
+        // num001 = parseInt(num % 10); // 세번째
+        // num010 = parseInt((num / 10) % 10); // 두번째
+        // num100 = parseInt((num/100) % 10); // 첫번째
+
+        // console.log(num001);
+        // console.log(num010);
+        // console.log(num100);
+
+        
+        /*========================================================================*/
+        
+        // // 입력받은 값.
+        // num = 123;
+
+        // // 공통점. 세번째 값 출력. 그리고 sum에 계속 값을 더할 거다.
+        // sum = num % 10; //3 출력
+
+        // while(true){
+        //     //첫번째, 두번째 값 구하기.
+        //     num = parseInt(num / 10); // 첫 실행때 첫번째와 두번째 값 출력 = 12
+        //                               // 두번째 실행때 첫번째 값. 첫번째 값 출력 = 1
+        //     //두번째 값 구해서 세번째 값 더하기.
+        //     sum += (num % 10); // 첫번째 실행-> 3 + 2 = 5 sum은 5가 되었음
+        //                        // 두번째 실행-> 5 + 1 = 6 sum은 6이 되었음
+
+        //     //다시 while문 내의 첫번째 실행문으로 이동.
+
+        //     //값을 구하면 멈추어야함. break를 줘야함.
+        //     //남은 자릿수가 1자릿수이기 때문에 10 미만이면 멈추도록 하면 된다.
+        //     if(num < 10){
+        //         break;
+        //     }
+        // }
+        // console.log(sum); //최종 더한 값 출력.
+
+
+        //3, 6, 9 가 총 몇개 있는지 찾기.
+        // let i = 123456789;
+        // num = i * 10;
+        // let count = 0;
+
+        // while(true){
+        //     num = parseInt(num / 10);
+
+        //     if((num % 10) % 3 == 0){
+        //         count++;
+        //     }
+        //     if(num < 10){
+        //         break;
+        //     }
+        // }
+        // log(count);
+        
+
+        // 369게임. 아무도 안 틀림.
+        // 1234번째 박수치는 사람은?
+        // 103번에서 박수쳐야하는 사람이 박수 안침. 탈락.
+
+        // let total_clap = 0;
+        // let stop = 1234;
+        // for(let i = 1; i<2000; i++){
+        //     num = i * 10;
+        //     let count = 0;
+        //     while(true){
+        //         num = parseInt(num / 10);
+        //         if((num % 10)==3 || (num % 10)==6 || (num % 10)==9 ){count++;}
+        //         if(num<10){
+        //             break;
+        //         }
+        //     }
+        //     total_clap += count;
+
+        //     log(i,"번째", i%4 ,"번 선수가 박수:", count ,"누적박수:",total_clap);
+        //     if(total_clap >= stop){
+        //         log(i%4,"번 선수가", stop,"번째 박수를 쳤습니다.");
+        //         break;
+        //     }
+        // }
+
+
+        // // 입력 받은 값. 각가의 자릿수를 더하기.
+        
+        // let num = 12345;
+
+        // // let num001 = parseInt(123 % 10); // 3
+        // // let num010 = parseInt(num / 10) % 10; // 2
+        // // let num100 = parseInt(num / 100) % 10; // 1
+
+        // let sum = parseInt(num % 10);
+        
+        // while(true){
+        //     num = parseInt(num / 10);
+        //     sum += (num % 10);
+        //     if(num < 10){
+        //         break;
+        //     }
+
+        // } console.log(sum);
+
+        // 값 입력받기.
+        // 입력받은 값의 각 자릿수 뽑아내기.
+        // 각 자릿수가 3, 6, 9인지 확인하기.
+
+        // let i = 12345; //값 입력받음.
+        // let count = 0;
+        // let num = i * 10;
+        
+        // while(true){
+        //     console.log('num의 값1: ', num);
+        //     console.log('==============');
+        //     num = parseInt(num / 10);
+        //     console.log(num);
+        //     console.log('==============');
+            
+        //     //마지막 자릿수 출력
+        //     //마지막 자릿수 3,6,9인지 확인하기.
+            
+        //     if(((num % 10) % 3) === 0){
+        //         count++;
+        //     }
+        //     if(num < 10){
+        //         break;
+        //     }
+        //     console.log('num의 값2: ', num);
+        // };
+        
+        // console.log('count의 값: ', count);
+        
+
+        // // 3, 6, 9 숫자 카운트
+
+        // let i2 = 123456; // 숫자받기.
+
+        // let num2 = i2 * 10;
+        // let count2 = 0;
+
+        // // i2의 각 자릿수 추출해서 % 3 했을 때 나머지값이 === 0이 되면 카운트 1 증가.
+        // // 반복해서 확인해야하니까 반복문을 사용할 것.
+
+        // while(true){
+        //     console.log('현재 num2의 값1: ', num2);
+        //     console.log('=================');
+        //     num2 = parseInt(num2 / 10);
+        //     console.log('현재 num2의 값2: ', num2);
+        //     console.log('=================');
+        //     if((num2 % 10) % 3 === 0){
+        //         count2++;
+        //     }
+        //     if(num2 < 10){
+        //         break;
+        //     }
+        //     console.log('현재 num2의 값3: ', num2);
+        //     console.log('=================');
+        // }
+        
+        // console.log('입력 받은 수에서 3, 6, 9가 포함된 갯수는: ', count2);
+
+        /*==================================================================*/
+
+       // 입력받은 수에서 3, 6, 9 숫자 갯수 추출.
+       // 각 자릿수 추출하기.
+       // 각 자릿수를 % 3 해서 === 0이면 카운터 올리기.
+       // 반복문 사용.
+       
+        // 입력값 받기.
+        let i = 123456999;
+        let count = 0;
+        let num = i * 10; // 출력한 자릿수의 숫자 담는 변수.
+
+        while(true){
+            num = parseInt(num / 10); // parseInt 꼭!
+        
+            if(((num % 10) % 3) === 0){
+                count++;
+            }
+            if(num < 10){
+                break;
+            }
+        }
+        console.log(count);
+
+        
 
     </script>
 </body>
