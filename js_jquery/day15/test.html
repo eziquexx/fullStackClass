@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+    <script>
+        //6차 new object이용해서 객체만들고 배열로 사용하기
+        let Pictures = new Array();
+        
+        let Picture = new Object();
+        Picture.title = '에펠탑의 신랑신부';
+        Picture.imgAddr = './images/pic01.jpg';
+        Picture.author = '샤갈';
+        Picture.year = '1899';
+        Pictures.push(Picture);
+
+        Picture = new Object();
+        Picture.title = '꿈';
+        Picture.imgAddr = './images/pic02.jpg';
+        Picture.author = '피카소';
+        Picture.year = '1900';
+        Pictures.push(Picture);
+
+        Picture = new Object();
+        Picture.title = '무용실';
+        Picture.imgAddr = './images/pic03.jpg';
+        Picture.author = '드가';
+        Picture.year = '1901';
+        Pictures.push(Picture);
+
+        for(let i = 0; i< 3;i++){
+            document.write('<dl><dt>',Pictures[i].title,'</dt><dd><img src="',
+            Pictures[i].imgAddr,'"></dd><dd>',Pictures[i].author,'(',Pictures[i].year,')</dd></dl>');      
+        }
+
+
+
+    </script>
+</body>
+</html>

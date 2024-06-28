@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt 객체 직접 만들기 - 사용자 객체</title>
+    <link rel="stylesheet" href="./css/box.css">
+</head>
+<body>
+    <!-- 
+    <dl><dt>에펠탑의 신랑신부</dt><dd><img src="./images/pic01.jpg" alt=""></dd></dl> 
+    -->
+
+    <script>
+        
+        // 1차 자바스크립트로 그림태그 만들기
+        // 한줄에 작성해야만 된다.
+        // document.write('<dl><dt>에펠탑의 신랑신부</dt><dd><img src="./images/pic01.jpg" alt=""></dd></dl>');
+        
+        /*
+        *
+        */
+
+        // 2차 자바스크립트로 변수에 해당하는 코드로 분류하기
+        // 결합연산자 또는 연결연산자로 구분짓고 연결해주기.
+        // document.write('<dl><dt>', '에펠탑의 신랑신부', '</dt><dd><img src="','./images/pic01.jpg', '" alt=""></dd></dl>');
+
+         /*
+        *
+        */
+
+        // 3차 자바스크립트로 변수에 해당하는 코드로 분류하기
+        // 결합연산자 또는 연결연산자로 연결 가능하다.
+        // let title = '에펠탑의 신랑신부';
+        // let imgAddr = './images/pic02.jpg';
+        // document.write('<dl><dt>', title, '</dt><dd><img src="', imgAddr, '" alt=""></dd></dl>');
+        // document.write('<dl><dt>' + title +'</dt><dd><img src="' + imgAddr + '" alt=""></dd></dl>');
+
+        /*
+        *
+        */
+        
+        // // 4차 자바스크립트로 변수를 배열에 넣어서 사용하기
+        // // 결합연산자 또는 연결연산자로 연결 가능하다.
+        // let titles = new Array();
+        // let imgAddrs = new Array();
+
+        // // titles변수에 push(); 배열 메서드를 사용하여 맨 끝에 값을 추가한다.
+        // titles.push('에펠탑의 신부신랑신부');
+        // titles.push('꿈');
+        // titles.push('무용실');
+        // titles.push('피아노치는 노녀들');
+
+        // // imgAddrs변수에 push(); 배열 메서드를 사용하여 맨 끝에 값을 추가한다.
+        // imgAddrs.push('./images/pic01.jpg');
+        // imgAddrs.push('./images/pic02.jpg');
+        // imgAddrs.push('./images/pic03.jpg');
+        // imgAddrs.push('./images/pic04.jpg');
+
+        // // for문(반복문)을 사용하여 titles의 array index와 imgAddrs index를 대입하여 실행시킨다.
+        // // i < 4에서 '4'는 추가할 이미지가 4개이니까.
+        // // index는 0부터 시작이라서 4개의 이미지 추가하려면 0, 1, 2, 3 index가 있다.
+        // for(let i = 0; i < 4; i++){
+        //     document.write('<dl><dt>', titles[i], '</dt><dd><img src="', imgAddrs[i], '" alt=""></dd></dl>')
+        // }
+
+
+        /*
+        *
+        */
+
+        // // 5차 new Object이용해서 객체 만들기
+        // let Picture = new Object();
+        // Picture.title = '에펠탑의 신부신랑신부';
+        // Picture.imgAddr = './images/pic01.jpg';
+        // document.write('<dl><dt>', Picture.title, '</dt><dd><img src="', Picture.imgAddr, '" alt=""></dd></dl>');
+        
+
+        /*
+        *
+        */
+
+        // // 6차 new Object이용해서 객체 만들고 배열로 사용하기
+        // let Pictures = new Array();
+        // let Picture = new Object();
+
+        // Picture.title = '에펠탑의 신부신랑신부';
+        // Picture.imgAddr = './images/pic01.jpg';
+        // Pictures.push(Picture);
+
+        // Picture = new Object();
+        // Picture.title = '꿈';
+        // Picture.imgAddr = './images/pic02.jpg';
+        // Pictures.push(Picture);
+        
+        // Picture = new Object();
+        // Picture.title = '무용실';
+        // Picture.imgAddr = './images/pic03.jpg';
+        // Pictures.push(Picture);
+
+        // for(let i = 0; i < 3; i ++){
+        //     document.write('<dl><dt>', Pictures[i].title, 
+        //         '</dt><dd><img src="', Pictures[i].imgAddr, 
+        //             '" alt=""></dd></dl>');
+        // }
+
+
+        // // 7차 리터럴 이용해서 객체 만들고 배열로 사용하기
+        // let Pictures = new Array();
+        // let Picture = {
+        //     title: '에펠탑의 신랑신부',
+        //     imgAddr: './images/pic01.jpg',
+        // };
+        // Pictures.push(Picture);
+
+        // Picture = {
+        //     title: '꿈',
+        //     imgAddr: './images/pic02.jpg',
+        // };
+        // Pictures.push(Picture);
+
+        // Picture = {
+        //     title: '무용실',
+        //     imgAddr: './images/pic03.jpg',
+        // };
+        // Pictures.push(Picture);
+
+        // for(let i = 0; i < 3; i ++){
+        //     document.write('<dl><dt>', Pictures[i].title, 
+        //         '</dt><dd><img src="', Pictures[i].imgAddr, 
+        //             '" alt=""></dd></dl>');
+        // }
+
+
+        // // 8차 생성자 함수를 이용해서 객체 만들고 배열로 사용하기
+        // // 변수 Pictures에 Array() 객체 새로 생성.
+        // let Pictures = new Array();
+
+        // // 생성자 함수
+        // // 생성자 함수 Picture의 파라미터로 aTitle, aImgAddr 값을 받는다.
+        // // 파라미터로 받은 aTitle, aImgAddr은 
+        // function Picture(aTitle, aImgAddr){
+           
+        //     // 객체 안의 속성.
+        //     this.title = aTitle;
+        //     this.imgAddr = aImgAddr;
+        // };
+
+        // // let pic = new Picture('에펠탑의 신랑신부', './images/pic01.jpg');
+        // // Pictures.push(pic);
+        // Pictures.push(new Picture('에펠탑의 신랑신부', './images/pic01.jpg'));
+        // Pictures.push(new Picture('꿈', './images/pic02.jpg'));
+        // Pictures.push(new Picture('무용실', './images/pic03.jpg'));
+
+        // // 변수 Pictures에 담은 Array()객체의 index값을 불러와서 출력한다.
+        // for(let i = 0; i < 3; i ++){
+        //     document.write('<dl><dt>', Pictures[i].title, 
+        //         '</dt><dd><img src="', Pictures[i].imgAddr, 
+        //             '" alt=""></dd></dl>');
+        // }
+
+
+
+        /// 9차 질문하기.
+        // // 9차 new Object이용해서 속성과 기능이 포함된 객체 만들고 배열로 사용하기
+        // // Pictures라는 변수에 새로운 Array() 객체를 생성.
+        // let Pictures = new Array();
+
+        // // Picture1 변수에 새로운 객체를 생성.
+        // let Picture1 = new Object();
+        // // Picutre1변수 안에 title 속성으로 '에펠탑의 신부신랑신부' 값 넣기.
+        // Picture1.title = '에펠탑의 신랑신부';
+
+        // // Picture1변수 안에 imgAddr 속성으로 이미지 주소 값 넣기.
+        // Picture1.imgAddr = './images/pic01.jpg';
+
+        // // Picture1변수를 .show() 객체 메서드 안에 함수를 만들어 놓는다.
+        // // 함수안의 식은 document.write 브라우저 화면에 ( ) 안에 코드를 보여줘라.
+        // // 어떤 코드를?
+        // // Picutre1 변수의 title객체에 담은 값 '에펠탑의 신랑신부'
+        // // Picture1 변수의 imgAddr객체에 담은 값 './images/pic01.jpg'
+        // Picture1.show = function(){
+        //     document.write('<dl><dt>', Picture1.title, 
+        //         '</dt><dd><img src="', Picture1.imgAddr, 
+        //             '" alt=""></dd></dl>');
+        // }
+        // Pictures.push(Picture1);
+
+        // Picture2 = new Object();
+        // Picture2.title = '꿈';
+        // Picture2.imgAddr = './images/pic02.jpg';
+        // Picture2.show = function(){
+        //     document.write('<dl><dt>', Picture2.title, 
+        //         '</dt><dd><img src="', Picture2.imgAddr, 
+        //             '" alt=""></dd></dl>');
+        // }
+        // Pictures.push(Picture2);
+        
+        // Picture3 = new Object();
+        // Picture3.title = '무용실';
+        // Picture3.imgAddr = './images/pic03.jpg';
+        // Picture3.show = function(){
+        //     document.write('<dl><dt>', Picture3.title, 
+        //         '</dt><dd><img src="', Picture3.imgAddr, 
+        //             '" alt=""></dd></dl>');
+        // }
+        // Pictures.push(Picture3);
+
+        // for(let i = 0; i < 3; i ++){
+        //     Pictures[i].show();
+        // }
+
+
+        // // 10차 리터럴 이용해서 객체 만들고 배열로 사용하기
+        // // 변수 Pictures에 Array() 객체를 새로 생성하여 담는다.
+        // let Pictures = new Array();
+
+        // // 변수 Picture1안에는 리터럴
+        // let Picture1 = {
+        //     title: '에펠탑의 신랑신부',
+        //     imgAddr: './images/pic01.jpg',
+        //     show: function(){
+        //         document.write('<dl><dt>', this.title, 
+        //         '</dt><dd><img src="', this.imgAddr, 
+        //             '" alt=""></dd></dl>');
+        //     }
+        // };
+        // Pictures.push(Picture1);
+
+        // Picture2 = {
+        //     title: '꿈',
+        //     imgAddr: './images/pic02.jpg',
+        //     show: function(){
+        //         document.write('<dl><dt>', this.title, 
+        //         '</dt><dd><img src="', this.imgAddr, 
+        //             '" alt=""></dd></dl>');
+        //     }
+        // };
+        // Pictures.push(Picture2);
+
+        // Picture3 = {
+        //     title: '무용실',
+        //     imgAddr: './images/pic03.jpg',
+        //     show: function(){
+        //         document.write('<dl><dt>', this.title, 
+        //         '</dt><dd><img src="', this.imgAddr, 
+        //             '" alt=""></dd></dl>');
+        //     }
+        // };
+        // Pictures.push(Picture3);
+
+        // for(let i = 0; i < 3; i ++){
+        //     Pictures[i].show();
+        // }
+
+
+        // 11차 생성자 함수를 이용해서 속성과 기능을.
+        let Pictures = new Array();
+
+        // 생성자 함수
+        // 생성자 함수 Picture의 파라미터로 aTitle, aImgAddr 값을 받는다.
+        // 파라미터로 받은 aTitle, aImgAddr은 
+        function Picture(aTitle, aImgAddr){
+           
+            // 객체 안의 속성.
+            this.title = aTitle;
+            this.imgAddr = aImgAddr;
+            this.show = function(){
+                document.write('<dl><dt>', this.title, 
+                '</dt><dd><img src="', this.imgAddr, 
+                    '" alt=""></dd></dl>');
+            }
+        };
+
+        // let pic = new Picture('에펠탑의 신랑신부', './images/pic01.jpg');
+        // Pictures.push(pic);
+        Pictures.push(new Picture('에펠탑의 신랑신부', './images/pic01.jpg'));
+        Pictures.push(new Picture('꿈', './images/pic02.jpg'));
+        Pictures.push(new Picture('무용실', './images/pic03.jpg'));
+
+        // 변수 Pictures에 담은 Array()객체의 index값을 불러와서 출력한다.
+        for(let i = 0; i < 3; i ++){
+            Pictures[i].show();
+        }
+    </script>
+</body>
+</html>

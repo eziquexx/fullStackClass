@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성</title>
+    <link rel="stylesheet" href="./css/box.css">
+</head>
+<body>
+    <dl>
+        <dt>html 에벨탑의 신랑신부</dt>
+        <dd><img src="./images/pic01.jpg" alt=""></dd>
+    </dl>
+    <script>
+
+        // 1차 
+        // document.write('<dl><dt>에펠탑의 신랑신부1</dt><dd><img src="./images/pic01.jpg"></dd></dl>');
+
+
+        // 2차 자바스크립트로 변수에 해당하는 코드로 분류하기.
+        // 결합연산자, 연결연산자로 연결해주기.
+        // document.write('<dl><dt>', 
+        //     '에펠탑의 신랑신부2', '</dt><dd><img src="', 
+        //     './images/pic01.jpg', '"></dd></dl>');
+
+
+        // 3차 자바스크립트로 변수를 선언하고 값 할당하여 이요하기.
+        // let title = '에펠탑의 신랑신부3';
+        // let imgAddr = './images/pic01.jpg';
+
+        // document.write('<dl><dt>', title ,'</dt><dd><img src="', imgAddr,'"></dd></dl>');
+
+
+        // 4차 자바스크립트로 변수를 선언하고 값으로 배열 객체를 새로 만들어 배열의 Index 값을 넣어서 사용하기.
+        // 그리고 for문(반복문)을 사용하여 Array()객체의 index값을 불러와서 출력하기.
+        // let titles = new Array();
+        // let imgAddrs = new Array();
+
+        // titles.push('에펠탑의 신랑신부4');
+        // titles.push('꿈4');
+        // titles.push('무용실4');
+        // titles.push('피아노치는 노녀들4');
+
+        // imgAddrs.push('./images/pic01.jpg');
+        // imgAddrs.push('./images/pic02.jpg');
+        // imgAddrs.push('./images/pic03.jpg');
+        // imgAddrs.push('./images/pic04.jpg');
+
+        // for(let i = 0; i < 4; i++){
+        //     document.write('<dl><dt>', titles[i] ,'</dt><dd><img src="', imgAddrs[i],'"></dd></dl>');
+        // };
+
+        
+        // 5차 new Object() 이용해서 객체 만들기.
+        // let Picture = new Object();
+
+        // Picture.title = '에펠탑의 신랑신부5';
+        // Picture.imgAddr = './images/pic01.jpg';
+
+        // document.write('<dl><dt>', Picture.title ,'</dt><dd><img src="', Picture.imgAddr,'"></dd></dl>');
+
+
+        // 6차 new Object() 이용해서 객체를 만들고 배열로 사용하기.
+        let Pictures = new Array();
+        let Picture = new Object();
+
+    </script>
+</body>
+</html>
