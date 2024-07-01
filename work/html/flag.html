@@ -26,14 +26,18 @@
             numArr = ['안녕하세요', 'HELLO', '中国語で', 'こんにちは'];
             pick = 'HELLO';
             let btnGroup = new Array;
-            let list;
+            let btn1;
+            let btn2;
+            let btn3;
+            let btn4;
+
             // btnGroup.push(document.getElementById('btn1'));
             // btnGroup.push(document.getElementById('btn2'));
             // btnGroup.push(document.getElementById('btn3'));
             // btnGroup.push(document.getElementById('btn4'));
-            for(i = 0; i < numArr.length; i++){
-                list = document.getElementByTagName('li');
-                btnGroup.push(list);
+            for(i = 1; i <= numArr.length; i++){
+                
+                btnGroup.push(document.getElementById('btn'+[i]));
             }
             // const btn2 = document.getElementById('btn2');
             // const btn3 = document.getElementById('btn3');
@@ -41,13 +45,10 @@
             
             // console.log(btnGroup[0]);
             // 각 버튼을 numArr에 담긴 index 값으로 변경하기.
-            console.log(btnGroup);
             for(i = 0; i < numArr.length+1; i++){
                 btnGroup[i].textContent = numArr[i];
-                
                 // btnGroup[i].createTextNode('hello');
             }
-        
             
 
             
