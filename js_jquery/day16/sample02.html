@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 1em;
+            background: #F0F0F0;
+            margin-top: 1em;
+            border: 1px solid #ccc;
+        }
+        .container p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .container a {
+            display: block;
+            margin-top: 0.5em;
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        // HTML 요소 생성하기
+        // 01.
+        // 삽입할 요소 찾기
+        const mainEle = document.getElementById('content');
+        
+        // div태그 만들기
+        const divEle = document.createElement('div');
+
+        // 만든 div에 class명 추가.
+        divEle.classList.add('container');
+        
+        // p태그를 만들기
+        const pEle = document.createElement('p');
+        pEle.textContent = '새문장입니다.';
+        
+        // a태그 만들기
+        const aEle = document.createElement('a');
+        aEle.setAttribute('href', 'https://www.naver.com');
+        aEle.textContent = '네이버로 이동';
+        
+        mainEle.appendChild(divEle); // #content > .div 추가
+        divEle.appendChild(pEle); // .div > p태그 추가
+        divEle.appendChild(aEle); // .div > a태그 추가
+    </script>
+</body>
+</html>

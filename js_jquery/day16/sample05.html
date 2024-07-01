@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // window.onload를 하면 웹브라우저가 전부 다 나온다음에 실행시켜라 라는 말.
+        // 아래 코드를 window.onload 이벤트 핸들러 없이 head태그 안에서 실행시키면 실행이 안된다.
+        // 그래서 window.onload 이벤트 핸들러를 사용하면 가능하다.
+        // 실행시키고 싶은 요소 밑에다가 두면 실행이 된다.
+        // window.onload = function(){ 
+        //     // aEle 변수에 .cta > a 담기.
+        //     const aEle = document.querySelector('.cta > a');
+        //     aEle.textContent = '예약 취소';
+        // }
+    </script>
+</head>
+<body>
+    <div class="cta">
+        <!-- <a href="#">예약 합니다.</a> -->
+         <p id="reservation1" onclick="javascript:doclick1()">예약1 합니다.</p>
+         <p id="reservation2">예약2 합니다.</p>
+         <p id="reservation3">예약3 합니다.</p>
+        <section id="no" class="hide">
+          <h3 class="title">Sorry about that!</h3>
+          <p>By some weird coincidence, all the rooms at Moonwalk Manor are booked out for the date you planned to take your trip. Unfortunately we are unable to provide you with sufficient lodging for your party at this time. Moonwalk Manor is very busy and your satisfaction is our top priority. When you take your first steps in the moon dust, your life will change. We are always at your service. Your satisfaction matters to us.</p>
+        </section>
+    </div>
+    <script>
+        // 이벤트와 핸들러 연결 방식 - 1
+        function doclick1(){
+            alert('예약1');
+        }  
+
+        // 이벤트와 핸들러 연결 방식 - 2
+        // 장점: 간편, 예전브라우저에서 동작
+        // 단점: 이벤트1 => 핸들러 여러개 적용가능, 런타임중에 변경불가
+        const btn2 = document.getElementById('reservation2');
+        btn2.onclick = function(){
+            alert('예약2');
+        }
+        // 이벤트 1개만 가능하기 때문에 이벤트가 덮어씌워진다.
+        btn2.onclick = function(){ 
+            btn2.textContent = '예약2 버튼이 눌렸습니다.';
+        }
+
+        // 이벤트와 핸들러 연결 방식 - 3
+        // 장점: 이벤트1 => 핸들러 여러개 적용가능, 런타임중에 변경가능
+        // 단점: 복잡, 예전브라우저에서 동작불가(IE8)
+        const btn3 = document.getElementById('reservation3');
+        btn3.addEventListener('click', function(){
+            alert('예약3');
+        })
+        btn3.addEventListener('click', function(){
+            btn3.textContent = '예약3 버튼이 눌렸습니다.';
+        })
+    </script>
+</body>
+</html>

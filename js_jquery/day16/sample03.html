@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .picBox {
+            margin: 2em auto;
+            width: 500px;
+        }
+
+        .picBox figcaption {
+            margin-top: 1em;
+            padding-right: 30%;
+            padding-left: 1em;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 예제 1 -->
+    <figure class="picBox">
+        <img src="./images/earth.jpg" alt="우주에서 본 지구 모습입니다.">
+    </figure>
+
+    <!-- 예제 2-->
+    <div>
+
+    </div>
+    <script>
+        // 예제1
+        // alt값을 읽어서 이미지 하단에 제목으로 표시하기
+        // picBox구하기
+        const picBoxEle = document.querySelector('.picBox');
+        // 이미지 태그요소 구하기
+        const imgEle = document.querySelector('.picBox > img');
+        // 이미지 alt값 구하기
+        const altString = imgEle.getAttribute('alt');
+        // p태그 만들기
+        const pEle = document.createElement('p');
+        // p태그에 이미지 alt값 텍스트로 적용하기
+        pEle.textContent = altString;
+        // p태그에 style 속성과 속성값들 추가하기.
+        pEle.setAttribute('style', 'text-align: center; font-size: 20px;');
+        // p태그를 picBox에 등록하기
+        picBoxEle.append(pEle);
+    </script>
+
+    <script>
+        // 예제2
+        // div를 개체로 선언하기
+        const divDom = document.querySelector('div');
+
+        // for문을 사용하여 img태그 6개 만들기
+        for(i = 1; i <= 6; i++){
+            // img 요소 노드를 생성하기
+            const IMG = document.createElement('img');
+            // img태그에 속성으로 src와 이미지 주소 추가하기
+            // 이미지의 이름을 i 값으로 대체.
+            // 주의 이미지 경로는 백틱 사용하기 ( ` ` ). 외따옴표 아님.
+            IMG.setAttribute('src', `./images/color_${i}.png`); 
+            // img태그를 div태그 안에 넣기.
+            divDom.appendChild(IMG);
+        }
+    </script>
+</body>
+</html>
