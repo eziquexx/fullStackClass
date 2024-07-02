@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button {
+            position: relative;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            border: none;
+            background-color: coral;
+            border-radius: 8px;
+            color: #fff;
+            margin: 0 10px;
+            box-shadow: 0px 3px 7px rgba(97, 92, 91, 0.6);
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: 0 5px 11px rgba(97, 92, 91, 0.6);
+            background-color: rgb(250, 140, 99);
+        }
+        button:active {
+            box-shadow: 0 0px 2px rgba(97, 92, 91, 0.6);
+            background-color: rgb(172, 81, 48);
+        }
+
+        #box {
+            position: relative;
+            width: 80%;
+            margin: 20px auto 0;
+            background-color: beige;
+            border: 1px solid rgb(206, 206, 180);
+            /* border: 1px solid red; */
+        }
+        ul, li {
+            display: block;
+            list-style: none;
+        }
+        ul {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid blue; */
+        }
+        li {
+            width: 25%;
+            float: left;
+            margin-right: 10px;
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+            border: 5px solid slategray;
+        }
+        p {
+            width: 100%;
+            display: block;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="./images/pic1.jpg" alt="이미지01"></li>
+            <li><img src="./images/pic2.jpg" alt="이미지02"></li>
+            <li><img src="./images/pic3.jpg" alt="이미지03"></li>
+            <li><img src="./images/pic4.jpg" alt="이미지04"></li>
+        </ul>
+        <p>
+            <button id="left">◀</button>
+            <button id="right">▶</button>
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $('#left').click(function(){
+                $('#box > ul > li:first-child').appendTo('#box > ul');
+            });
+            $('#right').click(function(){
+                $('#box > ul > li:last-child').prependTo('#box > ul');
+            });
+        });
+    </script>
+</body>
+</html>

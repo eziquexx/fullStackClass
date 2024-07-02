@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .naver {
+            width: 100px;
+            height: 50px;
+            background-color: #ff00ff;
+        }
+        button {
+            width: 120px;
+            height: 40px;
+            border: 1px solid rgb(173, 85, 21);
+            border-radius: 8px;
+            background-color: chocolate;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px tan;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        button:hover {
+            background-color: rgb(223, 138, 77);
+            box-shadow: 0px 8px 20px tan;
+        }
+        button:active {
+            background-color: rgb(175, 85, 21);
+            box-shadow: 0px 2px 5px tan;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn01">클래스 추가</button>
+    <button id="btn02">클래스 제거</button>
+    <button id="btn03">클래스 토글</button>
+    <p><a href="http://www.naver.com">네이버</a></p>
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                $('p').addClass('naver');
+            });
+            $('#btn02').click(function(){
+                $('p').removeClass('naver');
+            });
+            $('#btn03').click(function(){
+                $('p').toggleClass('naver');
+            });
+        });
+    </script>
+</body>
+</html>
