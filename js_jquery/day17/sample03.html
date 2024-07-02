@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본선택자</title>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <p><button id="btn">버튼</button></p>
+    <ul id="list1">
+        <li class="a">list1 item a</li>
+        <li class="b">list1 item a</li>
+        <li class="c">list1 item b</li>
+        <li class="d">list1 item b</li>
+    </ul>
+    <p class="num">class a</p>
+    <q>normal 01</q>
+    <p class="b">class b</p>
+    <p>normal 02</p>
+    <em id="first">변경전</em>
+    <p id="second">아무것도 없습니다.</p>
+    <p class="olde"><strong>변경되었습니다.</strong></p>
+    
+    
+    <script>
+        $(function(){
+
+            // 버튼 클릭했을 때
+            $('#btn').click(function(){
+                // 버튼 클릭하면 .a 글자색 변경
+                $('.a').css('color', 'red');
+
+                // 버튼 클릭하면 #list1 background-color와 list-style 변경
+                $('#list1').css({
+                    'background-color' : 'yellow',
+                    'list-style' : 'none'
+                });
+
+                // 버튼 클릭하면 #first 테그트 변경
+                $('#first').text('변경후');
+
+                // 버튼 클릭하면 class num을 가지고 있는 p태그의 +(바로 옆 형제) q태그를 선택하여 background-color를 변경
+                $('p.num+q').css('background-color', 'green');
+
+                // 버튼 클릭하면 class num을 가지고 있는 p태그의 형제들 중 'p태그들'을 찾아서 background-color를 변경
+                $('p.num~p').css('background-color', 'red');
+            });
+
+            
+        });
+    </script>
+</body>
+</html>

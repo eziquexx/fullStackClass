@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        #wrap {
+            position: relative;
+            margin: 100px auto 0;
+            width: 60%;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: tomato;
+            border: 0;
+            box-sizing: border-box;
+            border-radius: 7px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(151, 71, 71, 0.6);
+            transition: all .3s ease;
+        }
+        button:hover {
+            background-color: rgb(255, 124, 100);
+            box-shadow: 0 10px 16px rgba(151, 71, 71, 0.6);
+        }
+        button:active {
+            background-color: rgb(255, 79, 48);
+            box-shadow: 0 2px 4px rgba(151, 71, 71, 0.6);
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 10px 0;
+            display: block;
+        }
+        li::after {
+            display: block;
+            content: '';
+            width: 50px;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <button id="btn01">button</button>
+        <div id="container">
+            <nav>
+                <ul class="list">
+                    <li id="first" title="a1a">One</li>
+                    <li class="second" title="bb">Two</li>
+                    <li id="third" title="cerc">Three</li>
+                    <li id="fourth">Four</li>
+                    <li id="fifth"></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            // 버튼 클리하면
+            $('#btn01').click(function(){
+                // li 두번째. 배경 #9ab92e, 칼라 #05184d
+                // $('li:nth-child(2)').css({
+                //     'background-color' : '#9ab92e',
+                //     'color' : '#05184d'
+                // });
+
+                // li 두번째 제외하고 모든 li에 스타일 적용. 배경 #9ab92e, border 1px 점선 #05184d
+                // $('li:not(:nth-child(2))').css({
+                //     'background-color' : '#9ab92e',
+                //     'border' : '1px dotted #05184d'
+                // });
+
+                // 콘텐츠가 없는 li 요소에 노드 "orange" 넣기.
+                // $('li:empty').text('orange');
+
+                //3번째 li요소 앞의 모든 li 요소의 스타일 적용.
+                // $('li:lt(2)').css({
+                //     'background-color' : '#9ab92e',
+                //     'border' : '1px dotted #05184d'
+                // });
+
+                // id의 값이 f로 시작하고 id의 값이 s를 포함한 li요소의 스타일 적용.
+                // $('li[id^="f"][id*="s"]').css({
+                //     'background-color' : '#00c8c3',
+                //     'border' : '1px dotted #05184d'
+                // });
+
+                // li의 속성 title의 값이 bb가 아닌 li 요소의 스타일 적용
+                $('li[title!="bb"]').css({
+                    'background-color' : '#00c8c3',
+                    'border' : '1px dotted #05184d'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

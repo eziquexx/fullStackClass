@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+    <button type="button">sample</button>
+    <div></div>
+    <p></p>
+    <script>
+        $(function(){
+            $('div').text('제이쿼리시작하기');
+
+            // 글자 색상 바꾸어보기
+            $('button').click(function(e){
+                // 스타일 하나만 적용시킬 때
+                // $('p').text('welcome').css('color','red');
+
+                // 스타일 여러개 적용시킬 때
+                $('p').text('welcome').css({
+                    'color' : 'white',
+                    'background-color' : 'blue'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

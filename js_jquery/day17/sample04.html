@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+    <p><button id="btn_01">Click Me</button></p>
+    <ul class="box01">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+    <ul class="box02">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+    <ul class="box03">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+
+    <script>
+        $(function(){
+            // 버튼 .click(무명함수)
+            // $('#btn_01').click(function(){
+            //     $('.box01 li:nth-child(2)').css('border', '2px solid red');
+            //     $('.box02 li:nth-child(3n+1)').css('background-color', 'pink');
+            // });
+            $('#btn_01').click(
+                function(){
+                    $('.box01 li:nth-child(2)').css('border', '2px solid red');
+
+                    // 4묶음으로 했을 때 첫번째만 선택
+                    $('.box02 li:nth-child(4n+1)').css('background-color', 'pink');
+                    // $('.box02 li:nth-child(even), li:nth-child(odd)').css('background-color', 'pink');
+                    // $('.box02 li:nth-child(odd)').css('border', '2px solid blue');
+                    
+                    // 1번부터 3번까지 선택하는 방법
+                    $('.box03 li:nth-child(-n+3)').css('background-color', 'red');
+                    
+                    // 4번부터 6번까지 선택하는 방법
+                    // $('.box03 li:nth-child(n+4):nth-child(-n+6)').css('background-color', 'blue');
+                    $('.box03 li:nth-last-child(-n+3)').css('background-color', 'blue');
+                }
+            );
+        });
+    </script>
+</body>
+</html>
