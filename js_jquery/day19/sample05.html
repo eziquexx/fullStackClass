@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .wrap {
+            width: 40%;
+            /* height: 300px; */
+            margin: 30% auto 0;
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid #ddd; */
+        }
+        dl {
+            width: 200px;
+            height: auto;
+            background-color: rgb(170, 224, 107);
+            /* border: 1px solid red; */
+        }
+        .dlBg{
+            background-color: rgb(70, 100, 36);
+            color: #fff;
+        }
+        dt {
+            width: 100%;
+            padding: 10px 0;
+            background-color: rgb(170, 224, 107);
+            color: rgb(71, 27, 11);
+            border-bottom: 1px solid rgb(121, 163, 72);
+            text-indent: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.6s ease;
+        }
+        dt:hover {
+            background-color: rgb(203, 233, 171);
+            color: rgb(121, 163, 72);
+        }
+        dd {
+            width: 100%;
+            padding: 14px 16px;
+            /* padding: 8px 10px;
+            height: 80px; */
+            line-height: 120%;
+            background-color: rgb(143, 192, 86);
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <dl>
+            <dt>Title 1</dt>
+            <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</dd>
+            <dt>Title 2</dt>
+            <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</dd>
+            <dt>Title 3</dt>
+            <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</dd>
+        </dl>
+    </div>
+
+    <script>
+        $(function(){
+            // dt 클릭하면 dd가 slideDown되게
+            // $('dt').on('click', function(){
+            //     $(this).next('dd:not(:animated)').slideToggle(600);
+            // });
+
+
+            // 다른 방식으로
+            $('dt').on('click', function(){
+                let displaySrc = $(this).next('dd').css('display');
+                if(displaySrc == 'none'){
+                    $(this).next('dd').slideDown(300);
+                    $(this).addClass('dlBg');
+                } else {
+                    $(this).next('dd').slideUp(300);
+                    $(this).removeClass('dlBg');
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>

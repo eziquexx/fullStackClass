@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section {
+            width: 500px;
+            margin: 0 auto;;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            border: 1px solid saddlebrown;
+        }
+        div {
+            width: 250px;
+            float: left;
+            text-align: center;
+        }
+        p {
+            margin: 20px auto;
+            text-align: center;
+        }
+        p.box {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            display: none;
+        }
+
+        button {
+            padding: 6px 14px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="box01">
+            <p>
+                <button class="btn01">일반 버튼</button>
+                <p class="box general"></p>
+            </p>
+        </div>
+        <div id="box02">
+            <p>
+                <button class="btn02">광클 버튼</button>
+                <p class="box spamming"></p>
+            </p>
+        </div>
+    </section>
+
+    <script>
+        $(function(){
+            // 일반 버튼
+            $('.btn01').on('click', function(){
+                $('.general').slideToggle(1000);
+            });
+
+            // 광클 버튼
+            $('.btn02').on('click', function(){
+                $('.spamming:not(:animated)').slideToggle(1000);
+            });
+
+        }); // function end
+    </script>
+</body>
+</html>

@@ -74,6 +74,8 @@
             float: left;
             width: 100px;
         }
+
+        
         #all > #show_view > ul > li:last-child {
             margin-right: 0;
         }
@@ -109,11 +111,15 @@
         $(function(){
 
             $('#prev').click(function(){
-                $('ul >li:last').prependTo('div#show_view ul');
+                $('ul > li:first').appendTo('div#show_view ul');
+                let firstImg = $('#show_view ul li:nth-child(2) img').attr('src');
+                $('#bigImage img').attr('src', firstImg);
             });
 
             $('#next').click(function(){
-                $('ul >li:first').appendTo('div#show_view ul');
+                $('ul >li:last').prependTo('div#show_view ul');
+                let firstImg = $('#show_view ul li:nth-child(2) img').attr('src');
+                $('#bigImage img').attr('src', firstImg);
             });
             $('#show_view li img').click(function(){
                 let showImg = $(this).attr('src');
