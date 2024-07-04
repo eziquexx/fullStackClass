@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+
+        .btn {
+            position: relative;
+            padding: 14px 16px;
+            background-color: tomato;
+            color: #fff;
+            border: 0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin: 20px 0 50px 20px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: rgb(255, 143, 123);
+        }
+        .btn:active {
+            background-color: rgb(255, 88, 58);
+        }
+        .ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        img {
+            width: 100%;
+            display: block;
+            box-sizing: border-box
+        }
+        /* .line {
+            width: 100%;
+            height: 30px;
+            margin-top: -8px;
+            background-color: yellowgreen;
+        } */
+    </style>
+</head>
+<body>
+    <button class="btn">C L I C K !!!</button>
+    <div class="ball"><img src="./img/soccerBall.png" alt="축구공"></div>
+    <div class="line"></div>
+
+    <script>
+        $(function(){
+            // .btn을 클릭하면 실행해라 뭘?
+            $('.btn').on('click', function(){
+                // 변수 move1과 move2 만들기
+                // Math() 함수 사용.
+                let move1 = Math.round(Math.random() * 450);
+                let move2 = Math.round(Math.random() * 250);
+
+                // .ball에 animate 효과를 적용시키기.
+                // left는 변수 move1 적용. top은 move2 적용.
+                $('.ball').animate({
+                    left : move1,
+                    top  : move2
+                }, 'slow');
+            });
+        });
+    </script>
+</body>
+</html>

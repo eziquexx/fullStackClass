@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .btn {
+            position: fixed;
+            top: 10px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #btnScrollTop {
+            left: 50px;
+        }
+        #btnScrollLeft {
+            left: 150px;
+        }
+        #btnAniTop {
+            left: 250px;
+        }
+        #btnAniLeft {
+            left: 490px;
+        }
+        #top {
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+            background-color: tomato;
+            padding: 3px;
+            border-radius: 20%;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 7px 14px;
+            font-size: 14px;
+            line-height: 120%;
+            text-align: center;
+            
+        }
+        #wrap {
+            width: 800px;
+            font-size: 1.5em;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="btnScrollTop" class="btn">scroll Top</div>
+    <div id="btnScrollLeft" class="btn">scroll Left</div>
+    <div id="btnAniTop" class="btn">ani 우하(오른쪽 아래; 대각선)</div>
+    <div id="btnAniLeft" class="btn">ani 원점</div>
+    <div id="wrap">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aspernatur ab tempora ad beatae dolor cum numquam, doloremque corporis soluta aperiam nobis, non sunt suscipit sed illo facilis temporibus possimus. <br>
+    </div>
+    <div id="top"><a href="">▲<br>Top</a></div>
+
+    <script>
+        $(function(){
+            $('#btnScrollTop').on('click', function(){
+                $('html, body').scrollTop(200);
+            });
+            $('#btnScrollLeft').on('click', function(){
+                $('html, body').scrollLeft(1000);
+            });
+            $('#btnAniTop').on('click', function(){
+                $('html, body').animate({
+                    scrollTop : 800,
+                    scrollLeft : 200
+                }, 800, 'swing');
+            });
+            $('#btnAniLeft').on('click', function(){
+                $('html, body').animate({
+                    scrollTop : 0,
+                    scrollLeft : 0
+                }, 800, 'swing');
+            });
+        });
+    </script>
+
+</body>
+</html>
