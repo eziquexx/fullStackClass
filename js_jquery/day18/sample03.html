@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            position: relative;
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <button id="btn01">button</button>
+        <div id="container">
+            <p>안녕하세요</p>
+        </div>
+        <button id="btn02">button</button>
+        <div id="container2">
+            <p>오랜만입니다.</p>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <section>
+            <p class="btn">
+                <button id="btn03">이미지 가져오기</button>
+            </p>
+            <p class="box03">
+                <img src="./img/color_1.png" alt="sample1">
+            </p>
+            
+        </section>
+    </div>
+
+    <div class="wrap">
+        <button id="btnStart">출발</button>
+        <button id="btnStop">멈추기</button>
+        <div id="runWrap">
+            <img src="./img/1.png" alt="">
+        </div>
+        <p id="runText"></p>
+    </div>
+
+    <script>
+        $(function(){
+            let i;
+            let run = setInterval(running, 300);
+            function running(){
+                // 이미지는 계속 ++ 된다.
+                // if문을 사용.
+                if( i < 15){
+                    $('#runWrap img').attr('src', './img/'+i+'.png');
+                    i++;
+                } else {
+                    i = 1;
+                    $('#runWrap img').attr('src', './img/1.png');
+                }
+            }
+            
+            $('#btnStart').click(function(){
+                let i = 1;
+                setInterval(running,100);
+            });
+            $('#btnStop').click(function(){
+                // 멈추기 clearInterval();
+                clearInterval(run);
+            });
+            
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                // let tempClone = $('#container > p').clone(); 
+                // $('#container > p').before(tempClone).html('반갑습니다.');
+                $('#container > p').after('<p>반갑습니다.</p>');
+
+            });
+            $('#btn02').click(function(){
+                let tempClone = $('#container2 > p').clone();
+                $('#container2 > p').after(tempClone).html('안녕하셨어요.');
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $('#btn03').click(function(){
+                let i = 1;
+                if(i < 7){
+                    i++;
+                    console.log(i);
+                    let imgName = './img/color_' + i + '.png';
+                    $('p.box03 > img').attr('src', imgName);
+                    $('p.test').text(i);
+                    console.log(i);
+                } else {
+                    i = 1;
+                    $('p.box03 > img').attr('src', './img/color_1.png');
+                    $('p.test').text(1);
+                }
+                
+            });
+        });
+    </script>
+</body>
+</html>

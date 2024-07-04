@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            width: 1000px;
+        }
+        a {
+            text-decoration: none;
+            color: #fc6;
+        }
+        div {
+            padding: 10px;
+        }
+        #top {
+            background-color: gray;
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+        }
+        #tt {
+            position: fixed;
+            left: 410px;
+            top: 0;
+            z-index: 100;
+            background-color: #f39;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        #wrap {
+            width: 400px;
+            background-color: dimgray;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="tt">tt</div>
+    <div id="wrap">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus quis consectetur amet illum nulla ratione, praesentium inventore voluptate ab aperiam nostrum sapiente dicta tempore placeat, debitis delectus nesciunt at.<br>
+    </div>
+    <div id="top"><a href="#">Top</a></div>
+
+
+    <script>
+        $(function(){
+            $(window).on('scroll', function(){
+                let posY = Math.floor($('html, body').scrollTop());
+                let posX = Math.floor($('html, body').scrollLeft());
+                $('#tt').text(posX + ',' + posY);
+            });
+        });
+
+    </script>
+</body>
+</html>

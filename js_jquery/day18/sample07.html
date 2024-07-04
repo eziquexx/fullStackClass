@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        .wrap {
+            width: 80%;
+            margin: 20px auto 10px;
+            border: 2px solid #ddd;
+            border-radius: 14px;
+            padding: 20px;
+        }
+        img { display: block; }
+        .wrap > p {
+            display: block;
+            margin-top: 20px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap wrap2">
+        <ul id="btn">
+            <!-- 예제는 href를 사용했지만 href 속성 대신 addr로 바꾸어서 해도 된다. -->
+             <!-- 보통은 data 속성을 사용한다. -->
+            <li><a data="./04/img/house_01.jpg" id="btn01">주택1</a></li>
+            <li><a data="./04/img/house_02.jpg" id="btn02">주택2</a></li>
+            <li><a data="./04/img/house_03.jpg" id="btn03">주택3</a></li>
+            <li><a data="./04/img/house_04.jpg" id="btn04">주택4</a></li>
+        </ul>
+        <p class="house"><img src="./04/img/house_05.jpg" alt="주택" id="back_img"></p>
+    </div>
+
+    <script>
+        $(function(){
+            $('.wrap2 li > a').click(function(){
+                // 마찬가지로 .attr('href') 대신 addr로 해도 된다.
+                let pic = $(this).attr('data');
+                $('.wrap2 p > img').attr('src', pic);
+
+                // return false는 href의 이동하는 속성을 없애준다.
+                // return false;
+            });
+        });
+    </script>
+
+</body>
+</html>

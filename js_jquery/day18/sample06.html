@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        .wrap {
+            width: 80%;
+            margin: 20px auto 10px;
+            border: 2px solid #ddd;
+            border-radius: 14px;
+            padding: 20px;
+        }
+        img { display: block; }
+        .wrap > p {
+            display: block;
+            margin-top: 20px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap wrap1">
+        <button>화면을 변경</button>
+        <span><a href="./04/img/sea.jpg">화면변경</a></span>
+        <p><img src="./04/img/flower.jpg" alt="꽃" id="img01"></p>
+    </div>
+
+    <script>
+        $(function(){
+            $('.wrap1 button').click(function(){
+                $('.wrap1 p > img').attr('src', './04/img/building.jpg');
+            });
+
+            $('.wrap1 a').click(function(){
+                $('.wrap1 p > img').attr('src', './04/img/Jellyfish.jpg');
+                // return false는 href의 값으로 이동하는 것을 막아준다.
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>
