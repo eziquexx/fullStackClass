@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자식창</h1>
+    <button onclick="sendParent();">부모창 전달</button>
+    <script>
+        function sendParent(){
+            alert('sendParent 호출');
+            window.parent['show']('안녕하세요');
+        }
+
+        function show(callback,data){
+            window.parent[callback](data);
+        }
+
+        function sum(callback, data1, data2){
+            result  = 0;
+            for(let i = data1; i<=  data2; i++){
+                result += i;
+            }
+            show(callback  , data1+' ~ ' +data2 +'=>'+result);
+        }
+
+        function getQueryParams(){
+            // window.location.search 는 '?' 뒤의 쿼리스트링을 가져옵니다.
+            // data1=1&data2=10&callback=show 이거를
+            // URLSearchParms는 배열로 담을 수 있음.
+            const params = new URLSearchParams(window.location.search);
+            return {
+                data1: parseInt(params.get('data1')),
+                data2: parseInt(params.get('data2')),
+                callback:params.get('callback')
+            }
+        }
+
+        const params = getQueryParams();
+        document.write(params.data1 +'~'+params.data2+'=>'+params.callback );
+        sum(params.callback, params.data1, params.data2);
+    </script>
+</body>
+</html>

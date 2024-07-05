@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <p></p>
+    <script>
+
+        $(function(){
+            // $(':input').on('keyup', function(e){
+            //     let str = $(this).val();
+            //     console.log(str);
+            //     $('p').text(str);
+            // })
+
+            // $(':input').on('change', function(e){
+            //     let str = $(this).val();
+            //     console.log(str);
+            //     $('body').append('<p>' + str + '</p>')
+            // })
+
+            // 입력값이 숫자로만 이루어져 있는지 확인하는 함수
+            // function isNumeric(input) { // 정규 표현식을 사용하여 숫자만 포함되어 있는지 확인const regex = /^[0-9]+$/; return regex.test(input); }
+            $(':input').on('change', function isNumeric(input) {
+                // 정규 표현식을 사용하여 숫자만 포함되어 있는지 확인
+                const regex = /^[0-9]+$/; 
+                return regex.test(input);
+            })
+
+            // 입력값이 올바른 이메일 형식인지 확인하는 함수
+            $(':input').on('change', function isValidEmail(input){
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(input);
+            })
+
+            // $(':input').on('change', function(e){
+            //     let str = $(this).val()
+            //     if(isValidEmail(str)){
+            //         console.log(str);
+            //         $('body').append('<p>' + str + '</p>');
+            //     } else {
+            //         alert('숫자만 입력 바람');
+            //     }
+            // })
+
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        ul, li {
+            list-style: none;
+        }
+        ul {
+            border-bottom: 1px solid #000;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        fieldset {
+            width: 50%;
+            margin: 10% auto 0;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        input[type=number] {
+            width: 100px;
+            padding: 5px 8px;
+        }
+        input[type=button] {
+            padding: 5px 8px;   
+        }
+        span {
+            display: inline-block;
+        }
+        p {
+            width: 100px;
+            height: 30px;
+            box-sizing: border-box;
+            padding: 5px 8px;
+            display: inline-block;
+            border: 1px solid #000;
+            margin: 0;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>가격</legend>
+                <span>1개 = 1,500원</span>
+                <ul>
+                    <li>
+                        <label for="userPrice">갯수</label>
+                        <input type="number" min="0" max="40" id="userPrice" placeholder="0~40개만 입력">
+                    </li>
+                    <li>
+                        <input type="button" value="계산하기">
+                    </li>
+                </ul>
+                <div>
+                    <span>총 가격: </span>
+                    <p>0</p>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <script>
+        $(function(){
+            // input[type=button]을 클릭하면
+            // #userPrice의 선택한 값(갯수) 곱하기 1500을 p 요소의 text 콘텐츠로 추가한다.
+            $('input[type=button]').on('click', function(){
+                // 입력한 갯수를 변수에 담기
+                let num = $('#userPrice').val();
+
+                // 변수에 담아놓은 값을 1500을 곱한 다음 p 태그에 text로 출력
+                let allPrice = num * 1500;
+                $('p').text(allPrice);
+            });
+        });
+    </script>
+</body>
+</html>

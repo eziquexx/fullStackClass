@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>AJAX예제</h1>
+        <p id="main"></p>
+    </div>
+
+    <script>
+        $(function(){
+            getData();
+        });
+
+        function getData(){
+            // .get('url 주소', 함수명)
+            // .get('url 주소', 함수명).fail(함수명);
+            $.get('testdata1.txt', successFn).fail(errorFn).always(completeFn);
+        }
+
+        // 성공하면 화면에 출력.
+        function successFn(result){
+            $('#main').append(result + '<br>');
+        }
+        
+        // 실패하면..
+        // sattus 상태를 표시
+        function errorFn(xhr, status2, strErr2){
+            $('#main').append('error: ' + status2 + strErr2 + '<br>');
+        }
+
+        // 성공하면
+        function completeFn(result){
+            $('#main').append('작업이 완료됨.<br>');
+        }
+
+    </script>
+</body>
+</html>
