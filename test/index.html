@@ -22,7 +22,7 @@
             height: 300px;
             background-color: rgb(255, 238, 207);
             padding: 20px;
-            margin-top: 10%;
+            /* margin-top: 10%; */
             border-radius: 100%;
         }
         .wrap::before {
@@ -42,45 +42,70 @@
             border-radius: 100%;
             background-color: #fff;
         }
-
+    
         /* clockHand */
         .clockHand {
             position: absolute;
             width: 100%;
             height: 100%;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             z-index: 999;
         }
         .hands {
             position: absolute;
-            transform-origin: 0 50%;
+            transform-origin: 0 100%;
             top: 50%;
             left: 50%;
+            border-radius: 0 20% 20% 0;
             /* transform: rotate(10deg); */
         }
         .hourHand {
-            width: 110px;
+            width: 80px;
             height: 4px;
-            background-color: #000;
-            transform-origin: 0 50%;
+            background-color: #497865;
             transform: rotate(0deg);
-            
         }
         .minHand {
-            width: 110px;
+            width: 100px;
             height: 4px;
-            background-color: #837a7a;
-            transform-origin: 0 50%;
+            background-color: #497865;
             transform: rotate(20deg);
         }
+        .minHand::after {
+            display: block;
+            content: '';
+            width: 13px;
+            height: 13px;
+            background-color: #497865;
+            position: absolute;
+            left: -8px;
+            top: -6px;
+            border-radius: 100%;
+            /* background-color: ; */
+        }
         .secHand {
-            width: 110px;
-            height: 4px;
-            background-color: #d3aeae;
-            transform-origin: 0 50%;
+            width: 100px;
+            height: 2px;
+            background-color: #dadada;
             transform: rotate(30deg);
         }
-
+        .handCenter {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: red; */
+        }
+        .handCenter div {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background: #dadada;
+            border-radius: 100%;
+        }
+    
         /* clockNum */
         .clockNum {
             position: relative;
@@ -164,7 +189,6 @@
             top: 8%;
             transform: translate(-50%, -50%);
         }
-
     </style>
 </head>
 <body>
@@ -176,6 +200,9 @@
                     <div class="hourHand hands"></div>
                     <div class="minHand hands"></div>
                     <div class="secHand hands"></div>
+                </div>
+                <div class="handCenter">
+                    <div></div>
                 </div>
             </div>
             <div class="clockNum">
@@ -193,6 +220,63 @@
                 <span>12</span>
             </div>
         </div>
+
+        <div class="testTxt">
+            <p></p>
+        </div>
     </div>
 </body>
+
+<script>
+    window.onload = function(){
+        // new Date(); 함수 불러오기.
+        let mainDate = new Date();
+        console.log(mainDate);
+
+        // 각각의 시, 분, 초 변수에 담기.
+        let hourNum = mainDate.getHours();
+        let minNum = mainDate.getMinutes();
+        let secNum = mainDate.getSeconds();
+
+        console.log(hourNum);
+        console.log(minNum);
+        console.log(secNum);
+        
+        // 1초 지나면 1각도로 움직인다.
+        // 만약에 secNum의 숫자가 1이면 시침의 각도는 1도 움직인다.
+        // querySelector과 querySelectorAll 
+        let secHand = document.querySelector('.secHand');
+        let style = getComputedStyle(secHand);
+        let transform = style.secHand
+        console.log('transform', transform);
+        // let transRotate = ;
+
+        // 변수에 각도 담기.
+        // 1초에 6도씩 움직임.
+        // 각도는 복합연산자 사용해서 += 6; 을 하면 됨.
+        // 1초는 6, 2초는 12 이렇게.
+        // sec += 1;
+        // secDeg += 6;
+        // sec 가 1이면 각도는 6이다.
+        
+        //secNum와 moveSecDeg 값 매핑
+        // 1은 6도.
+        // 2는 12도.
+        console.log(secNum);
+        console.log(secHand);
+
+        // for(i = 1; i <= 60; i++){
+        //     // i = secNum;
+        //     let secDeg = 6;
+        //     let moveDeg = secHand.style.transform = 'rotate(' + (i * secDeg) + 'deg)';
+        //     console.log(moveDeg);
+        // }
+
+        // let a;
+
+        // secHand.style.transform ='rotate('+ 20 + 'deg)';
+
+
+    }
+</script>
 </html>
