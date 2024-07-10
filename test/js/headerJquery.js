@@ -1,10 +1,5 @@
 $(function(){
-  
-  
-//   $(window).on('mousewheel', function(event) {
-//     console.log(event.deltaX, event.deltaY, event.deltaFactor);
-// });
-  
+
   $(window).on('scroll', function(){
     let windowTop = $(this).scrollTop();
     
@@ -40,5 +35,46 @@ $(function(){
 
   // nav 메뉴 클릭시 해당 섹션으로 이동.
   // 그리고 메뉴 아래에 border-bottom이 생긴다.
+
+
+  // span과 이미지 연결.
+  const dotBtns = $('.dotBtn');
+  const slideGallery = $('.imgGroup');
+
+  function slidetest(){
+    const move = slideGallery.children().first();
+    slideGallery.animate({
+      "left" : "-100%"
+    }, function(){
+      move.appendTo(slideGallery);
+      slideGallery.css('left', '0');
+    })
+  };
+
+  let a = setInterval(slidetest, 5000);
+  //clearInterval(a);
+  
+
+  // $sliderPanel.css('left', `-${index * 100}%`);
+  // let currentIndex = 0;
+  // function updateSlider(index){
+  //   slideGallery.css('left', `-${index * 100}%`);
+  //   dotBtns.removeClass('active');
+  //   dotBtns.eq(index).addClass('active');
+  // }
+
+  // dotBtns.on('click', function(){
+  //   currentIndex = parseInt($(this).data('index'));
+  //   updateSlider(currentIndex);
+  // });
+
+  // setInterval(function(){
+  //   currentIndex = (currentIndex + 1) % dotBtns.length;
+  //   updateSlider(currentIndex);
+  // }, 3000);
+
+  // setInterval(function(){
+  //   slideGallery.css('margin-left', `-(${slideGallery}/2)%`);
+  // }, 1000);
 
 });
