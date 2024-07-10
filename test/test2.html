@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <p class="count" data-value="200" >200</p>
+<p class="count" data-value="70" >70</p>
+<p class="count" data-value="32" >32</p>
+</body>
+<script>
+  $('.count').each(function () {
+    $(this).prop('Counter', 0).animate({
+            Counter: $(this).data('value')
+        }, {
+        duration: 1000,
+        easing: 'swing',
+        step: function (now) {                      
+            $(this).text(this.Counter.toFixed(2));
+        }
+    });
+});
+</script>
+
+</html>
