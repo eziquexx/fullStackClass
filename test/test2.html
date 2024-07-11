@@ -5,26 +5,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/test2.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+
+  <style>
+
+    
+  </style>
 </head>
 
 <body>
-  <p class="count" data-value="200" >200</p>
-<p class="count" data-value="70" >70</p>
-<p class="count" data-value="32" >32</p>
+  <!-- <div class="container">
+    <div class="slideWrap">
+        <div class="slideImg">첫번째</div>
+        <div class="slideImg">두번째</div>
+        <div class="slideImg">세번째</div>
+        <div class="slideImg">네번째</div>
+    </div>
+    <div class="dotbtn">
+  </div>
+  </div> -->
+  <div id="draggable">Drag me</div>
+  <div id="selector1">Drag me</div>
+  <div class="selector">Drag me</div>
+
+
+  <div class="container">
+    <div class="galleryWrap">
+      <div class="imgGroup">
+        <div class="gallery">1</div>
+        <div class="gallery">2</div>
+        <div class="gallery">3</div>
+        <div class="gallery">4</div>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
 </body>
+
 <script>
-  $('.count').each(function () {
-    $(this).prop('Counter', 0).animate({
-            Counter: $(this).data('value')
-        }, {
-        duration: 1000,
-        easing: 'swing',
-        step: function (now) {                      
-            $(this).text(this.Counter.toFixed(2));
-        }
+  $(function () {
+    // x값만 움직이게
+    $(".imgGroup").draggable({
+      axis: "x"
     });
-});
+
+    let galleryWrap = $('galleryWrap')
+    let imgGroup = $('imgGroup')
+    
+    $('')
+
+
+  });
+
 </script>
+<script src="./js/test2.js"></script>
 
 </html>

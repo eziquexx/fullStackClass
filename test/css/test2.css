@@ -1,0 +1,118 @@
+/* * { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+.slideWrap {
+  width: 400%;
+  height: 100%;
+}
+
+.slideWrap .slideImg {
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  font-size: 50px;
+  line-height: 800px;
+}
+.slideWrap .slideImg:nth-child(1) {
+  background-image: url(../img/main_visual1.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.slideWrap .slideImg:nth-child(2) {
+  background-image: url(../img/main_visual2.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.slideWrap .slideImg:nth-child(3) {
+  background-image: url(../img/main_visual1.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.slideWrap .slideImg:nth-child(4) {
+  background-image: url(../img/main_visual2.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+ */
+
+
+#draggable, #selector1, .selector {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+}
+
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border: 4px solid violet;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.galleryWrap {
+  position: relative;
+  width: 1600px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.galleryWrap .imgGroup {
+  width: 1600px;
+  height: 100%;
+}
+.galleryWrap .gallery {
+  width: 100%;
+  height: 100%;
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  line-height: 200px;
+}
+.galleryWrap .gallery:nth-child(1) {
+  background: steelblue;
+  width: 400px;
+}
+.galleryWrap .gallery:nth-child(2) {
+  background: tan;
+  width: 400px;
+}
+.galleryWrap .gallery:nth-child(3) {
+  background: sienna;
+  width: 400px;
+}
+.galleryWrap .gallery:nth-child(4) {
+  background: salmon;
+  width: 400px;
+}
+
+.dots {
+  position: absolute;
+  width: 220px;
+  margin: auto;
+  bottom: 20px;
+  left: 0; right: 0;
+}
+span {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+span.active {
+  background-color: black;
+}

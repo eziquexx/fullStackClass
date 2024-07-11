@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+    function includeHTML(ctrl, page, callback) {
+        $.get(page, function(data) {
+            $('#' + ctrl).html(data);
+            if (callback) {
+                callback();
+            }
+        });
+    }          
+  </script> 
+</head>
+<body>
+
+
+  <div id="header">
+    <!-- nav 시작 -->
+    <div id="nav"></div>
+    <script>
+        $(function(){
+            includeHTML('nav','header.html', null);
+        });
+    </script>     
+    <!-- nav 끝 -->
+
+
+    <!-- home시작 -->
+    <div id="home"></div>
+    <script>
+        $(function(){
+            includeHTML('home','home.html', null);
+        });
+    </script>   
+    <!-- home 끝 -->
+  </div>
+
+  <!-- about 시작 -->
+  <div id="about"></div>
+  <script>
+    $(function(){
+        includeHTML('about','about us.html', null);
+    });
+  </script>     
+  <!-- about 끝 -->
+  
+
+  
+
+</body>
+</html>

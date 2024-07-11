@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./css/test.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/test.js"></script>
 </head>
+
 <body>
-  <body>
-    <div class="memberCountCon"></div>
+  <div class="slider-container">
+    <div class="slider-control left inactive"></div>
+    <div class="slider-control right"></div>
+    <ul class="slider-pagi"></ul>
+
+
+    <div class="slider">
+      
+      <div class="slide slide-0 active">
+        <div class="slide__bg"></div>
+        <div class="slide__content">
+          test1
+        </div>
+      </div>
+      
+      <div class="slide slide-1 ">
+        <div class="slide__bg"></div>
+        <div class="slide__content">
+          test2
+        </div>
+      </div>
+      <div class="slide slide-2">
+        <div class="slide__bg"></div>
+        <div class="slide__content">
+          test3
+        </div>
+      </div>
+      <div class="slide slide-3">
+        <div class="slide__bg"></div>
+        <div class="slide__content">
+          test4
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
 </body>
 
 <script>
-    $(function () {
-        var memberCountConTxt = 300;
 
-        $({ val: 0 }).animate({ val: memberCountConTxt }, {
-            duration: 2000,
-            step: function () {
-                var num = numberWithCommas(Math.floor(this.val));
-                $(".memberCountCon").text(num);
-            },
-            complete: function () {
-                var num = numberWithCommas(Math.floor(this.val));
-                $(".memberCountCon").text(num);
-            }
-        });
-
-        //3자리마다 , 찍기
-        function numberWithCommas(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-    });
+  
 </script>
-</body>
 </html>
