@@ -1,9 +1,14 @@
 #about {
   position: relative;
   width: 100%;
+  margin-top: 130px;
 }
 
-.wrap {
+#about #images .img1, #images .img2 {
+  background: none;
+}
+
+#about .wrap {
   position: relative;
   margin: 0 auto;
   width: 1170px;
@@ -12,12 +17,12 @@
   /* border: 1px solid red; */
 }
 
-.titlewrap {
+#about .titlewrap {
   width: 100%;
   /* border: 1px solid blue; */
 }
 
-h1 {
+#about h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
   color: #232323;
@@ -26,14 +31,14 @@ h1 {
   text-align: center;
 }
 
-.line {
+#about .line {
   background-color: #f7d23d;
   width: 100px;
   height: 2px;
   margin: 20px auto;
 }
 
-.titlewrap > p {
+#about .titlewrap > p {
   font-size: 22px;
   width: 60%;
   font-size: 16px;
@@ -44,7 +49,7 @@ h1 {
   margin: 20px auto;
 }
 
-#images {
+#about #images {
   position: relative;
   width: 580px;
   padding-top: 10px;
@@ -59,48 +64,50 @@ h1 {
 
 #images > .img1 > img {
   width: 260px;
-
-  /* border: 1px solid black; */
+  opacity: 0;
 }
 
 #images > .img2 > img {
   width: 260px;
   padding-top: 20px;
-  /* border: 1px solid black; */
+  opacity: 0;
 }
 
-.contentwrap {
+#about .contentwrap {
   position: relative;
-  /* border: 1px solid green; */
   display: flex;
 }
 
-#BI {
+#about #BI {
   width: 580px;
   position: relative;
   padding: 10px;
-  /* border: 1px solid black; */
 }
 
-#BI > div {
+#about #BI > div {
   margin: 0 auto;
   width: 500px;
+  padding-top: 30px;
+  opacity: 0;
 }
 
-h2 {
+#about h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   color: #232323;
+  font-weight: 600;
 }
 
-.ct1 {
+#about .ct1 {
   font-size: 20px;
   font-weight: 500;
   color: #696868;
   letter-spacing: -1px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-.ct2 {
+#about .ct2 {
   font-size: 14px;
   line-height: 1.5;
   color: #666565;

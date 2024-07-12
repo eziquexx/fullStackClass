@@ -17,7 +17,7 @@ $(document).scroll(function () {
   } else {
     $(".menu li").css("color", "black");
     $(".tel p").css("color", "black");
-    $(".nav").css("background-color", "#00000000");
+    $(".nav").css("background-color", "#fff");
     $(".tel p").css("border-color", "black");
     $(".logo img").attr("src", "./img/logo.png");
   }

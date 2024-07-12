@@ -3,7 +3,7 @@
 /* 공통 부분
     section, .wrap
 */
-section {
+/* section {
   position: relative;
   width: 100%;
 }
@@ -12,7 +12,7 @@ section {
   width: 1170px;
   padding: 80px 15px;
   margin: 0 auto;
-}
+} */
 
 section#ourService {
   background-color: #fff;
@@ -23,6 +23,17 @@ section#ourService {
   section#ourService 
   .titleWrap
 */
+section#ourService {
+  position: relative;
+  width: 100%;
+}
+section#ourService .wrap {
+  position: relative;
+  width: 1170px;
+  padding: 80px 15px;
+  margin: 0 auto;
+}
+
 section#ourService .titleWrap {
   position: relative;
   width: 100%;
@@ -121,15 +132,20 @@ section#ourService .itemsWrap ul li.serviceItem .sItemSub {
 }
 
 
-/* 
+/* ***** 
   section#work
-*/
+***** */
 section#work {
   position: relative;
   width: 100%;
   background: #1c1c1c;
 }
-
+section#work .wrap {
+  position: relative;
+  width: 1170px;
+  padding: 80px 15px;
+  margin: 0 auto;
+}
 section#work ul.workItemsWrap {
   position: relative;
   width: 100%;
@@ -174,13 +190,3 @@ section#work ul.workItemsWrap li.workItem .wItemText span:last-child {
   line-height: 16px;
 }
 
-
-
-/* section test & animation (나중에 삭제해야 함) */
-section.testSection {
-  background-color: #ccc;
-  padding: 500px 0;
-  border: 1px solid green;
-  text-align: center;
-  font-size: 40px;
-}
