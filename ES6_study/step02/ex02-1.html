@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <h1 id="title">간단한 메모장</h1>
+  <input type="text" id="add-text">
+  <button id="add-button">추가</button>
+
+  <div class="container">
+    <p>메모목록</p>
+    <ul id="memo-list">
+
+    </ul>
+  </div>
+
+  <script>
+    // 클릭하면 실행할 함수.
+    // 실행할 함수는 메모 list들
+    const onClickAdd = () => {
+
+      // input에 담긴 텍스트 값 얻기
+      const textEle = document.getElementById('add-text');
+      // textEle에 담긴 값을 text 변수에 담기.
+      const text = textEle.value;
+      // input에 글자를 입력하고 추가버튼 클릭하면 input에 글자가 남는다. 이 흔적을 지워보자.
+      textEle.value = '';
+      
+      // list 만들기
+      // 어디에 추가할 것인가? ul#momo-list 안에 추가할 거다.
+      const ulEle = document.getElementById('memo-list');
+      // 무엇을 추가할 것인가?
+      // li 태그와 li 태그 안에는 입력한 내용을 뿌려주는 p태그와 리스트를 삭제할 수 있는 button 태그가 있다.
+      // 새로 생성하는 것은 .createElement()를 사용.
+      const liEle = document.createElement('li');
+      const divEle = document.createElement('div');
+      const pEle = document.createElement('p');
+      const btnEle = document.createElement('button');
+      // button태그에 아무 글자도 없으니 글자도 추가해주자.
+      // 글자는 삭제라고. 왜냐하면 버튼을 클릭하면 메모 리스트가 삭제되어야하니까.
+      btnEle.textContent = '삭제';
+
+      // 위에서 추가할 리스트 뼈대를 만들었으니 ul#add-text의 자식으로 들어가도록 만들자.
+      // 하나하나씩 추가.
+      // 1. ul태그 자식으로 l태그 담기.
+      ulEle.appendChild(liEle);
+
+      // 2. li태그 자식으로  div 담기.
+      liEle.appendChild(divEle);
+
+      // 3. div태그 자식으로 p태그와 button태그 각각 담기.
+      divEle.appendChild(pEle);
+      divEle.appendChild(btnEle);
+
+      // 4. div태그 자식으로 p태그를 담았는데 글자가 보이지 입력한 글자가 보이지 않는다.
+      // 위에서 textEle에서 받은 값을 const text에 담았는데 text 변수를 p 태그의 text로 뿌려주자.
+      pEle.textContent = text;
+
+      
+
+      // 자, 다 만들었는데 삭제 버튼을 클릭했을 때 리스트가 삭제되는 것을 만들자.
+      btnEle.addEventListener('click', () => {
+        // btnEle(삭제버튼)을 클릭하면 ul태그 안에 있는 li가 삭제된다.
+        ulEle.removeChild(liEle);
+      })
+
+    }
+    
+
+    // 추가 버튼을 클릭하면 실행할 함수 메모 list가 추가된다.
+    // addBtn 변수에 button#add-button 노드 담기.
+    const addBtn = document.getElementById('add-button');
+    
+    // addBtn을 클릭하면 위에 input에 입력한 글자가 리스트 형식으로 추가되는 이벤트를 만들어주자.
+    addBtn.addEventListener('click', onClickAdd);
+  </script>
+</body>
+</html>

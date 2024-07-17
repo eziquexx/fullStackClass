@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <h1 id="title">간단한 메모장</h1>
+  <input type="text" name="" id="add-text">
+  <button id="add-button">추가</button>
+  <div class="container">
+    <p>메모목록</p>
+    <ul id="memo-list">
+      <!-- 메모 리스트가 담길 공간 -->
+    </ul>
+  </div>
+
+  <script>
+    const onClickAdd = () => {
+      const textCont = document.getElementById('add-text');
+      const text = textCont.value;
+      textCont.value = '';
+
+      const ulEle = document.getElementById('memo-list');
+      const liEle = document.createElement('li');
+      const divEle = document.createElement('div');
+      const pEle = document.createElement('p');
+      const btnEle = document.createElement('button');
+
+      ulEle.appendChild(liEle);
+      liEle.appendChild(divEle);
+      divEle.appendChild(pEle);
+      divEle.appendChild(btnEle);
+      btnEle.textContent = '삭제';
+      pEle.textContent = text;
+
+      btnEle.addEventListener('click', () => {
+        ulEle.removeChild(liEle);
+      })
+    }
+
+
+    const addBtn = document.getElementById('add-button');
+    addBtn.addEventListener('click', onClickAdd);
+  </script>
+</body>
+</html>
