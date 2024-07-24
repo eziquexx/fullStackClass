@@ -1,2 +1,228 @@
 
-#header nav {}
+.container {
+  max-width: 1048px;
+  margin: 0 auto;
+}
+/* *****
+  header, navBar, home
+*/
+#header {
+  padding: 0;
+  border: none;
+}
+#header .container {
+  border: none;
+}
+/* header > navBar */
+#header #navBar {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 999;
+  background-color: #aaa;
+  border: none;
+}
+#header #navBar .container {
+  display: flex;
+  justify-content: space-between;
+}
+#header #navBar .container .logo {
+  width: 238px;
+  height: 70px;
+  background-color: #999;
+  text-align: center;
+  line-height: 70px;
+}
+#header #navBar .container .menuWrap {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+#header #navBar .container .menuWrap .menuGroup {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center; 
+  background-color: #999;
+}
+#header #navBar .container .menuWrap .menuGroup li {
+  padding: 0 14px;
+}
+#header #navBar .container .menuWrap .naverTalk {
+  width: 116px;
+  height: 42px;
+  background-color: #999;
+  line-height: 42px;
+  margin-left: 14px;
+}
+#navBar .container #toggleBtn {
+  right:  0;
+  display: none;
+  cursor: pointer;
+} 
+#toggleMenu {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  display: none;
+}
+
+/* header > home */
+#header #home {
+  position: relative;
+  width: 100%;
+  height: 758px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid blue;
+}
+#header #home .container {
+  position: relative;
+  margin-top: 26px;
+  /* display: flex;
+  justify-content: space-between; */
+}
+#header #home .container .textWrap {
+  position: absolute;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48%;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 493px;
+  min-height: 342px;
+  text-align: left;
+  z-index: 333;
+}
+#header #home .container .textWrap .mainText {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -4px;
+}
+#header #home .container .textWrap .subText {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 28px 0;
+}
+#header #home .container .textWrap .subText span {
+  color: #555;
+  font-weight: 700;
+}
+#header #home .container .textWrap .button {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  border: 0;
+  letter-spacing: -1px;
+  width: 160px;
+  height: 46px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  line-height: 46px;
+}
+#header #home .container .textWrap .button span {
+  display: inline-block;
+  font-size: 14px;
+}
+#header #home .container .imgWrap {
+  position: relative;
+  float: right;
+  width: 48%;
+  min-width: 510px;
+  min-height: 556px;
+  height: 518px;
+}
+#header #home .container .imgWrap div:first-child {
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  width: 266px;
+  height: 266px;
+  border-radius: 50%;
+  z-index: 22;
+  background-color: #bbb;
+  box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+#header #home .container .imgWrap div:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 422px;
+  height: 518px;
+  border-radius: 48% 48% 0 0;
+  background-color: #ddd;
+  box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+@media screen and (max-width: 900px) {
+  /* 태블릿 너비에 대한 스타일 */
+  #header #home {
+    height: 700px;
+    margin: 0 auto;
+  }
+  #header #home .container {
+    margin-top: 100px;
+  }
+  #header #home .container .textWrap {
+    top: 34%;
+  }
+  #header #home .container .imgWrap {
+    position: relative;
+    min-width: 360px !important;
+    min-height: 394px;
+    height: 366px;
+  }
+  #header #home .container .imgWrap div:first-child {
+    position: absolute;
+    left: 0;
+    bottom: -38px;
+    width: 188px;
+    height: 188px;
+  }
+  #header #home .container .imgWrap div:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 298px;
+    height: 366px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  /* 모바일 너비에 대한 스타일 */
+  .container {
+    min-width: 467px;
+  }
+  #header #home {
+    height: 836px;
+    margin: 0 auto;
+  }
+  #header #home .container {
+    height: 646px;
+  }
+  #header #home .container .textWrap {
+    top: 0;
+    min-width: 386px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #header #home .container .textWrap .mainText {
+    letter-spacing: -1px;
+  }
+  #header #home .container .imgWrap {
+    position: absolute;
+    min-width: 360px !important;
+    min-height: 394px;
+    left: 50%;
+    bottom: 46px;
+    transform: translateX(-50%);
+  }
+}

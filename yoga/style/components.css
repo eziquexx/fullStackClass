@@ -3,19 +3,18 @@
 * {
   box-sizing: border-box;
 }
-
-header, section, footer {
+header, section, footer, #home {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  padding: 0 20px;
+  margin: 0 auto;
+  /* overflow: hidden; */
   border: 1px solid #aaa; /* 나중에 삭제 */
   text-align: center; /* 나중에 삭제*/
 }
 div.container {
   position: relative;
   width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
-  padding: 0 16px;
   border: 1px solid #a12727; /* 나중에 삭제 */
 }

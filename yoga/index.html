@@ -4,25 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOGA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/base.css">
   <link rel="stylesheet" href="./style/components.css">
+  <link rel="stylesheet" href="./style/large.css">
+  <link rel="stylesheet" href="./style/medium.css">
+  <link rel="stylesheet" href="./style/small.css">
+  <script src="./js/test.js"></script>
+  
 </head>
 <body>
   <header id="header">
-    <div class="container">
-      <nav>
-        <div class="logo"></div>
+    <nav id="navBar">
+      <div class="container">
+        <div class="logo"><a href="#">logo</a></div>
         <div class="menuWrap">
-          <ul class="menus">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul class="menuGroup">
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+            <li><a href="">menu5</a></li>
+            <li><a href="">menu6</a></li>
           </ul>
+          <div class="naverTalk">naverTalk</div>
+          <div id="toggleBtn"> 열기</div>
         </div>
-      </nav>
+      </div>
+      <div id="toggleMenu">
+        <ul class="toggleMenuGroup">
+          <li><a href="#"><span>menu1</span></a></li>
+          <li><a href="#"><span>menu2</span></a></li>
+          <li><a href="#"><span>menum3</span></a></li>
+          <li><a href="#"><span>menmu4</span></a></li>
+          <li><a href="#"><span>menu5</span></a></li>
+          <li><a href="#"><span>menu6</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <script src="./js/toggleBtn.js"></script>
+
+    <div id="home">
+      <div class="container">
+        <div class="textWrap">
+          <h1 class="mainText">
+            나마스떼 ^^<br/>
+            푸쉬파 요가 스튜디오 방문을
+            환영합니다. 
+          </h1>
+          <p class="subText">
+            푸쉬파요가는 <span>정통 하타요가</span>와 <span>아쉬탕가</span>를 체계적으로
+            수련하는 공간입니다. 
+          </p>
+          <div class="button">소개 보러 가기 <span>▶</span></div>
+        </div>
+        <div class="imgWrap">
+          <div><img src="" alt=""></div>
+          <div><img src="" alt=""></div>
+        </div>
+      </div>
+    </div>
     </div>
   </header>
   <section id="about">
