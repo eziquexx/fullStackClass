@@ -1,6 +1,6 @@
 
 /* *****
-  NavBar 
+  navBar 
   태블릿 너비에 대한 스타일
 */
 @media screen and (max-width: 900px) {
@@ -58,5 +58,42 @@
     content: '';
     margin-right: 10px;
     background-color: blue;
+  }
+}
+
+/* *****
+  home 
+  태블릿 너비에 대한 스타일
+*/
+@media screen and (max-width: 900px) {
+  #header #home {
+    height: 700px;
+    margin: 0 auto;
+  }
+  #header #home .container {
+    margin-top: 100px;
+  }
+  #header #home .container .textWrap {
+    top: 34%;
+  }
+  #header #home .container .imgWrap {
+    position: relative;
+    min-width: 360px !important;
+    min-height: 394px;
+    height: 366px;
+  }
+  #header #home .container .imgWrap div:first-child {
+    position: absolute;
+    left: 0;
+    bottom: -38px;
+    width: 188px;
+    height: 188px;
+  }
+  #header #home .container .imgWrap div:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 298px;
+    height: 366px;
   }
 }

@@ -164,65 +164,10 @@
 
 @media screen and (max-width: 900px) {
   /* 태블릿 너비에 대한 스타일 */
-  #header #home {
-    height: 700px;
-    margin: 0 auto;
-  }
-  #header #home .container {
-    margin-top: 100px;
-  }
-  #header #home .container .textWrap {
-    top: 34%;
-  }
-  #header #home .container .imgWrap {
-    position: relative;
-    min-width: 360px !important;
-    min-height: 394px;
-    height: 366px;
-  }
-  #header #home .container .imgWrap div:first-child {
-    position: absolute;
-    left: 0;
-    bottom: -38px;
-    width: 188px;
-    height: 188px;
-  }
-  #header #home .container .imgWrap div:last-child {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 298px;
-    height: 366px;
-  }
+ 
 }
 
 @media screen and (max-width: 599px) {
   /* 모바일 너비에 대한 스타일 */
-  .container {
-    min-width: 467px;
-  }
-  #header #home {
-    height: 836px;
-    margin: 0 auto;
-  }
-  #header #home .container {
-    height: 646px;
-  }
-  #header #home .container .textWrap {
-    top: 0;
-    min-width: 386px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #header #home .container .textWrap .mainText {
-    letter-spacing: -1px;
-  }
-  #header #home .container .imgWrap {
-    position: absolute;
-    min-width: 360px !important;
-    min-height: 394px;
-    left: 50%;
-    bottom: 46px;
-    transform: translateX(-50%);
-  }
+
 }
