@@ -1,6 +1,6 @@
 /* 공통 스타일 */
 
-* {
+*, html, body {
   box-sizing: border-box;
 }
 header, section, footer, #home {
@@ -14,7 +14,9 @@ header, section, footer, #home {
 div.container {
   position: relative;
   width: 100%;
+  max-width: 1080px;
   padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
   border: 1px solid #a12727; /* 나중에 삭제 */
 }
